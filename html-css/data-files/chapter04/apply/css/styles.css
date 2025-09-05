@@ -1,6 +1,7 @@
 /* Jesse Shults, 09/05/2025, styles.css */
 
 /*CSS Reset*/
+
 body, header, nav, footer, img, h1, h3{
     margin: 0;
     padding: 0;
@@ -12,12 +13,13 @@ body, header, nav, footer, img, h1, h3{
 
 
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    border-style: 0;}
+    background-color: #e3eaf8;}
 
-h1 {
+ img{
+    max-width: 100%;
+    display: block;}
+
+    h1 {
     text-align: center;
     font-size: 3em;
     font-family:georgia,times,serif;
