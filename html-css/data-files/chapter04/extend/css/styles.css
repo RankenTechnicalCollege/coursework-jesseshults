@@ -69,10 +69,7 @@ main a {
 /* Purple */
 
 .purple-hex{
-    background-color: #800080;
-}
-.purple-rgb{background-color:rgb(128, 0, 128)"
-}
+    background-color: #800080;}
 
 .purple.hsl{background-color: hsl(300, 100%, 25%);}
 
