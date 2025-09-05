@@ -1,0 +1,96 @@
+/* Jesse Shults, 09/05/2025, styles.css */
+
+/*CSS Reset*/
+body, header, nav, footer, img, h1, h3{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*style rule for body and image*/
+
+
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    border-style: 0;}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-family:georgia,times,serif;
+    padding: 3%;
+    color: #101a2d;
+}
+
+/*style rules for navigation area*/
+
+nav {background-color: #1d396d;}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    text-align: center;
+    
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family:verdana,arial,sans-serif;
+font-weight:bold;
+}
+
+nav li a {
+    display: block;
+    color: #e3eaf8;
+    padding: 0.5em 2em;
+    text-decoration: none;
+}
+
+/*styles rules for main content*/
+
+
+main{
+    padding: 2%;
+    font-family: geneva,Arial,sans-serif;
+    overflow: auto;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+main h3 {
+    padding-top: 2%;
+    font-size: 2em;
+}
+
+#content {
+    width: 45%;
+    float: left;
+    padding: 1%;
+}
+#group {
+    width: 45%;
+    float: right;
+}
+
+.external{
+    color: #1d396d;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*style rule for footer content*/
+
+ footer{
+    text-align: center;
+    font-size: 0.85em;
+    background-color: #1d396d;
+    color: #e3eaf8;
+    padding: 1% 0;
+ }
