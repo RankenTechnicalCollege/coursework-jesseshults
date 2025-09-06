@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Network Protocols</title>
+</head>
+<body>
+    <h1>Common Network Protocols</h1>
+
+    <dl>
+        <dt><strong>HTTP (HyperText Transfer Protocol)</strong></dt>
+        <dd>
+            A protocol used for transferring web pages over the internet. 
+            Learn more on 
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP" target="_blank">MDN Web Docs</a>.
+        </dd>
+
+        <dt><strong>FTP (File Transfer Protocol)</strong></dt>
+        <dd>
+            A protocol for transferring files between computers on a network. 
+            More details available on 
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/FTP" target="_blank">MDN</a>.
+        </dd>
+
+        <dt><strong>SMTP (Simple Mail Transfer Protocol)</strong></dt>
+        <dd>
+            A protocol used for sending email messages between servers. 
+            Learn more at 
+            <a href="https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol" target="_blank">Wikipedia</a>.
+        </dd>
+    </dl>
+</body>
+</html>
