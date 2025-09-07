@@ -1,0 +1,61 @@
+/* Wrapper centered */
+#wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+/* Gradient backgrounds */
+body {
+  background: linear-gradient(to bottom, #e6f2ff, #cce0ff);
+  font: italic bold 16px/1.5 Arial, sans-serif; /* shorthand font */
+}
+
+header {
+  background: linear-gradient(to right, #00274d, #0059b3); /* basketball court vibes */
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Relative + absolute measurements */
+h1 {
+  font-size: 2em;  /* relative */
+  margin-bottom: 20px; /* absolute */
+}
+
+/* Hex color */
+h2 {
+  color: #ff6600; /* bright NBA style orange */
+}
+
+/* Descendant selector */
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Multiple selectors */
+p, li {
+  font-size: 14px;
+}
+
+/* Child selector */
+main > section {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: rgb(245, 245, 245);
+}
+
+/* Pseudo-class selector */
+nav ul li a:hover {
+  color: #0059b3;
+}
+
+/* Custom heights & widths */
+p {
+  width: 80%;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+}
