@@ -1,55 +1,61 @@
 /*
 Author: Jesse Shults
 Date: 09/06/2025
-File Name: styles.css*/
+File Name: styles.css
+*/
 
-
-/*CSS reset */
-body, header, nav, main, footer, img, h1{
-    margin: 0;
-    padding: 0;
-    border: 0;
+/* CSS reset */
+body, header, nav, main, footer, img, h1, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-/*style rule for images*/
+/* Style rule for images */
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
+  height: auto;
 }
 
-/*styles rules for header content */
+/* Hide tab-desk class */
+.tab-desk {
+  display: none;
+}
+
+/* Styles rules for header content */
 header {
-    text-align: center;
-    font-size: 3em;
-    color: #373684;
+  text-align: center;
+  font-size: 3em;
+  color: #373684;
 }
 
 header h1 {
-    font-style: italic;
+  font-family: 'DM Serif Display', serif;
 }
 
-/* styles rules for navigation area */
+/* Styles rules for navigation area */
 nav {
-    background-color: #373684;
+  background-color: #373684;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    text-align: center;
+  list-style-type: none;
+  text-align: center;
 }
 
 nav li {
-    display:inline-block;
-    font-size: 2em;
+  display: block; 
+  font-size: 2em;
+  border-top: 1px solid #e5e9fc; 
 }
 
 nav li a {
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 0.5em 1em;
-    text-decoration: none;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 0.5em 1em;
+  text-decoration: none;
 }
 
 /* Style rules for main content */
@@ -57,24 +63,25 @@ main {
   padding: 2%;
   background-color: #e5e9fc;
   overflow: auto;
-  font-family: Verdana, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 main p {
   font-size: 1.25em;
 }
 
+
 .action {
-  font-size: 1.75em;
+  font-size: 1.25em; 
   color: #373684;
   font-weight: bold;
 }
 
+
 #piano, #guitar, #violin {
-  width: 29%;
-  float: left;
   margin: 0 2%;
 }
+
 
 #info {
   clear: left;
@@ -82,23 +89,52 @@ main p {
   padding: 1% 2%;
 }
 
+
+#info ul {
+  margin-left: 10%;
+}
+
+.round {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+
 #contact {
   text-align: center;
 }
 
-#contact a {
+.tel-link{
+  background-color: #373684;
+  padding: 2%;
+  margin: 0 auto;
+  width:80%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.tel-link a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  display: block;
+}
+
+#contact .email-link {
   color: #4645a8;
   text-decoration: none;
   font-weight: bold;
-}
+  }
+
 
 .map {
-    border: 5px solid #373684;
+  border: 5px solid #373684;
+  width: 95%;
+  height: 50%;
 }
 
 
-
-/* Style rules for footer content */
 footer {
   text-align: center;
   font-size: 0.65em;
