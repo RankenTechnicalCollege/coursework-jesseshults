@@ -1,7 +1,7 @@
 /* 
 Style sheet created by: 
-Student's Name 
-Today's Date 
+Student's Name Jesse Shults
+Today's Date 09/09/2025
 */
 body {
     background-color: #dde3fd;
@@ -21,13 +21,30 @@ body {
     height: 170px;
 }
 
-/* sticky */
+
+.sticky {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+}
 
 
-/* relative */
+.relative {
+    position: relative;
+    top: 90px;   
+    left: 05px;  
+}
 
 
-/* fixed */
+.fixed {
+    position: fixed;
+    top: 61px;   
+    right: 20px; 
+}
 
 
-/* absolute */
+.absolute {
+    position: absolute;
+    bottom: 284px; 
+    right: 30px;  
+}

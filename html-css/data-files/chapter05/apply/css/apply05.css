@@ -1,4 +1,6 @@
-/* Style sheet created by: Student's First Name Student's Last Name, Today's Date */
+/* Student Name: Jesse Shults, 
+    Date: 09/08/2025
+    File Name: apply05.html*/
 
 /* CSS Reset */
 body, header, nav, main, footer, h1, div, img, ul {
@@ -7,12 +9,26 @@ body, header, nav, main, footer, h1, div, img, ul {
     border: 0;
 }
 
-/* Style rule for body and images */
+
 body {
 	background-color: #e4f1f6;
 }
 
-/* Style rule for header */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Style rules for mobile viewport */
+
+/*style rule to hide tablet-desk class*/
+
+.tablet-desk {
+    display: none;
+}
+
+
 header {
 	font-family: Verdana, Arial, sans-serif;
 	text-align: center;
@@ -21,20 +37,26 @@ header {
     margin-top: 5%;
 }
 
-/* Style rules for nav */
+
 nav {
 	padding: 1%;
     margin-bottom: 1%;
     background-color: #67afcb;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
     text-align: center;
+    list-style-type: none; 
 }
 
 nav li {
     font-size: 1.5em;
     padding: 4%;
+    display: inline-block;
+    font-family: 'B612',
 }
 
 nav li a {
@@ -49,13 +71,21 @@ main {
 	margin: 1% 1% 15%;
 	padding: 1%;
     font-size: 1.5em;
+    font-family: 'Crimson Text'
+}
+
+.corner {
+    border-radius: 12px;
 }
 
 #image {
     margin-bottom: 1%;
 }
 
-/* Style rule for footer */
+
+
+
+
 footer {
 	font-size: .70em;
 	text-align: center;

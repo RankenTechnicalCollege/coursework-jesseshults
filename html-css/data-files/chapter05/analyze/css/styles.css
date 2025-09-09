@@ -1,7 +1,7 @@
 /*
-    Student Name
-	File Name: 
-	Current Date: 
+    Student Name: Jesse Shults
+    File Name: styles.css
+    Current Date: 09/08/2025
 */
 
 /* CSS reset */
@@ -21,7 +21,14 @@ img {
     display: block;
 }
 
-/* Style rules for header content */
+/* --- Style rules for mobile viewport begin --- */
+
+/* Hide tablet-desktop class in mobile view */
+.tablet-desktop {
+    display: none;
+}
+
+
 header h1 {
     text-align: center;
     color: #fff;
@@ -30,14 +37,16 @@ header h1 {
     font-size: 3em;
 }
 
-/* Style rules for navigation area */
+
 nav {
     background-color: #ebf7e3;
     border-bottom: 1px solid #375f1b;
 }
 
 nav ul {
-    text-align: center;
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
 }
 
 nav li {
@@ -45,6 +54,7 @@ nav li {
     font-family: Geneva, Arial, sans-serif;
     font-weight: bold;
     padding: 3%;
+    display: inline-block; 
 }
 
 nav li a {
@@ -62,6 +72,29 @@ main {
 
 main p {
     font-size: 1.25em;
+}
+
+/* Style rules for button-like paragraphs */
+.btn {
+    background-color: #375f1b;
+    padding: 2%;
+    margin: 2% auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Style rules for links inside button-like paragraphs */
+.btn a {
+    color: #ebf7e3;
+    text-decoration: none;
+    font-size: 1.25em;
+    display: block;
+}
+
+/* Style rule for corner class (rounded images) */
+.corner {
+    border-radius: 12px;
 }
 
 /* Style rules for footer content */
