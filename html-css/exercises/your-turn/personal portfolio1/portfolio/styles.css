@@ -1,0 +1,121 @@
+/* === Reset === */
+body, header, nav, main, footer, h1, h2, h3, p, ul, li, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* === Body === */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Header === */
+header {
+  background: #2a1f14;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+}
+header h1 {
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+header h2 {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/* === Navigation (mobile-friendly stacked links) === */
+nav {
+  background-color: #333;
+}
+nav ul {
+  list-style: none;
+}
+nav li {
+  border-bottom: 1px solid #444;
+}
+nav a {
+  display: block;
+  color: white;
+  padding: 1em;
+  text-decoration: none;
+  text-align: center;
+}
+nav a:hover {
+  background-color: #555;
+}
+
+/* === Main Content === */
+main {
+  padding: 5%;
+}
+main h2 {
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
+}
+main p {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+main ul {
+  list-style: square inside;
+  margin: 1em 0;
+}
+
+/* === Footer === */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+footer a {
+  color: #f9c74f;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Custom Classes === */
+.highlight {
+  color: #d62828;
+  font-weight: bold;
+}
+
+.round-img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* === Responsive Fixes === */
+@media (min-width: 600px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  nav li {
+    border: none;
+  }
+  nav a {
+    border-right: 1px solid #555;
+  }
+  nav a:last-child {
+    border-right: none;
+  }
+}
