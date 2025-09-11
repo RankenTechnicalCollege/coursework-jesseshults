@@ -1,83 +1,196 @@
-/* ========== Base Styles ========== */
+/* === Reset === */
+body, header, nav, main, footer, h1, h2, h3, p, ul, li, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* === Body === */
 body {
   font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
   line-height: 1.6;
-}
-
-header h1, header h2 {
-  font-family: 'Pacifico', cursive;
+  background: linear-gradient(to bottom, #fdfdfd, #f0f0f0);
+  color: #222;
   margin: 0;
+  padding: 0;
 }
 
+/* === Header === */
+header {
+  background: #2a1f14;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em;
+}
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2em;
+  margin-bottom: 0.3em;
+}
+header h2 {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+/* === Navigation (mobile-first) === */
+nav {
+  background-color: #333;
+}
 nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0;
-  margin: 10px 0;
   list-style: none;
 }
-
+nav li {
+  border-bottom: 1px solid #444;
+}
 nav a {
+  display: block;
+  color: white;
+  padding: 1em;
   text-decoration: none;
-  color: black;
+  text-align: center;
+}
+nav a:hover {
+  background-color: #555;
+}
+nav a.active {
+  background-color: #f9c74f;
+  color: #222;
   font-weight: bold;
 }
 
+/* === Main Content === */
 main {
-  padding: 20px;
+  padding: 5%;
 }
-
-footer {
+main h2 {
   text-align: center;
-  background: #f4f4f4;
-  padding: 15px;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+main p {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+main ul {
+  list-style: square inside;
+  margin: 1em 0;
+  padding-left: 1em;
 }
 
-/* Rounded corners */
-img, .call-btn {
-  border-radius: 12px;
-}
-
-/* Call button */
-.call-btn {
-  display: inline-block;
-  background: #ff9966;
+/* === Footer === */
+footer {
+  background-color: #333;
   color: white;
-  padding: 10px 15px;
-  border-radius: 8px;
+  text-align: center;
+  padding: 1.2em;
+  margin-top: 2em;
+}
+footer a {
+  color: #f9c74f;
   text-decoration: none;
 }
+footer a:hover {
+  text-decoration: underline;
+}
 
-/* ========== Mobile Styles ========== */
-@media (max-width: 600px) {
-  /* Hide large banners */
-  header img {
+/* === Custom Classes === */
+.highlight {
+  color: #d62828;
+  font-weight: bold;
+}
+
+.round-img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* === Map Container === */
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 1.5em auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.map-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+/* === Responsive Layouts === */
+
+/* Tablet (>= 600px) */
+@media (min-width: 600px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  nav li {
+    border: none;
+  }
+  nav a {
+    border-right: 1px solid #555;
+  }
+  nav a:last-child {
+    border-right: none;
+  }
+
+  main {
+    padding: 3%;
+  }
+}
+
+/* Desktop (>= 900px) */
+@media (min-width: 900px) {
+  body {
+    background: linear-gradient(to right, #fdfdfd, #e6e6e6);
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2em;
+    align-items: start;
+  }
+
+  nav a:hover {
+    background-color: #f9c74f;
+    color: #222;
+    transition: 0.3s;
+  }
+}
+
+/* Large Desktop (>= 1200px) */
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+    padding: 2em 15%;
+  }
+  header h1 {
+    font-size: 2.5em;
+  }
+}
+
+/* Print Styles */
+@media print {
+  nav, footer {
     display: none;
   }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
   }
-
-  nav a {
-    display: block;
-    background: #ffcc66;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-  }
-
-  iframe {
-    width: 100%;
-    height: 300px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
+  main {
+    padding: 0;
   }
 }

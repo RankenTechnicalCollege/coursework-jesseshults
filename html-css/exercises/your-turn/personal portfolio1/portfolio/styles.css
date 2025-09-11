@@ -33,7 +33,7 @@ header h2 {
   font-weight: 400;
 }
 
-/* === Navigation (mobile-friendly stacked links) === */
+/* === Navigation (mobile-first stacked links) === */
 nav {
   background-color: #333;
 }
@@ -103,7 +103,17 @@ footer a:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* === Responsive Fixes === */
+/* === Mobile/Desktop-specific visibility === */
+.mobile-only {
+  display: block;
+}
+.tablet-desktop-only {
+  display: none;
+}
+
+/* ========================================================= */
+/* === Tablet Media Query (min-width: 600px) =============== */
+/* ========================================================= */
 @media (min-width: 600px) {
   nav ul {
     display: flex;
@@ -117,5 +127,59 @@ footer a:hover {
   }
   nav a:last-child {
     border-right: none;
+  }
+
+  /* Hide mobile-only content, show tablet+ */
+  .mobile-only {
+    display: none;
+  }
+  .tablet-desktop-only {
+    display: block;
+    text-align: center;
+    margin: 1em 0;
+    color: #444;
+  }
+
+  /* Tablet typography adjustments */
+  main h2 {
+    font-size: 2em;
+  }
+  main p {
+    font-size: 1.2em;
+  }
+}
+
+/* ========================================================= */
+/* === Desktop Media Query (min-width: 992px) ============== */
+/* ========================================================= */
+@media (min-width: 992px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  main {
+    padding: 3%;
+  }
+
+  nav a {
+    padding: 1em 2em;
+    transition: background-color 0.3s ease; /* Smooth hover */
+  }
+
+  /* === Pseudo-class for desktop: hover effect === */
+  nav a:hover {
+    background-color: #f9c74f;
+    color: #222;
+    font-weight: bold;
+  }
+
+  /* Larger images on desktop */
+  .round-img {
+    max-width: 300px;
+  }
+
+  footer {
+    font-size: 0.9em;
   }
 }
