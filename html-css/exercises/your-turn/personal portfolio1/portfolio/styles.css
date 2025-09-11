@@ -1,4 +1,4 @@
-/* === Reset === */
+/* === Reset Styles === */
 body, header, nav, main, footer, h1, h2, h3, p, ul, li, img {
   margin: 0;
   padding: 0;
@@ -6,17 +6,14 @@ body, header, nav, main, footer, h1, h2, h3, p, ul, li, img {
   box-sizing: border-box;
 }
 
-/* === Body === */
+/* === Base Styles (Mobile-first) === */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background-color: #fdfdfd;
   color: #222;
-  margin: 0;
-  padding: 0;
 }
 
-/* === Header === */
 header {
   background: #2a1f14;
   color: #fff;
@@ -33,7 +30,6 @@ header h2 {
   font-weight: 400;
 }
 
-/* === Navigation (mobile-first stacked links) === */
 nav {
   background-color: #333;
 }
@@ -54,7 +50,6 @@ nav a:hover {
   background-color: #555;
 }
 
-/* === Main Content === */
 main {
   padding: 5%;
 }
@@ -72,7 +67,6 @@ main ul {
   margin: 1em 0;
 }
 
-/* === Footer === */
 footer {
   background-color: #333;
   color: white;
@@ -88,7 +82,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* === Custom Classes === */
+/* === Utility Classes === */
 .highlight {
   color: #d62828;
   font-weight: bold;
@@ -115,6 +109,7 @@ footer a:hover {
 /* === Tablet Media Query (min-width: 600px) =============== */
 /* ========================================================= */
 @media (min-width: 600px) {
+  /* Horizontal navigation */
   nav ul {
     display: flex;
     justify-content: center;
@@ -129,7 +124,7 @@ footer a:hover {
     border-right: none;
   }
 
-  /* Hide mobile-only content, show tablet+ */
+  /* Hide mobile-only content, show tablet+ content */
   .mobile-only {
     display: none;
   }
@@ -140,7 +135,7 @@ footer a:hover {
     color: #444;
   }
 
-  /* Tablet typography adjustments */
+  /* Tablet typography */
   main h2 {
     font-size: 2em;
   }
@@ -164,10 +159,10 @@ footer a:hover {
 
   nav a {
     padding: 1em 2em;
-    transition: background-color 0.3s ease; /* Smooth hover */
+    transition: background-color 0.3s ease;
   }
 
-  /* === Pseudo-class for desktop: hover effect === */
+  /* === Pseudo-class for desktop === */
   nav a:hover {
     background-color: #f9c74f;
     color: #222;
