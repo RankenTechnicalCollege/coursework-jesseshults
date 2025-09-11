@@ -1,7 +1,7 @@
 /*
-    Student Name
-	File Name: 
-	Current Date: 
+    Student Name: Jesse Shults
+    File Name: styles06.css
+    Current Date: 09/11/2025
 */
 
 /* CSS reset */
@@ -13,7 +13,7 @@ body, header, nav, main, footer, img, h1, h3, ul {
 
 /* Style rule for body and images */
 body {
-    background-color: #e5e0fa;
+    background: linear-gradient(to left, #e5e0fa, #29157e);  /* gradient background */
 }
 
 img {
@@ -24,15 +24,15 @@ img {
 /* Styles for Mobile Layout */
 
 /* Hide tablet-desktop content */
-    .tablet-desktop {
-        display: none;
-    }
+.tablet-desktop {
+    display: none;
+}
 
 /* Style rule for the header */
 header {
-	padding: 2%;
-	color: #110934;
-	text-align: center;
+    padding: 2%;
+    color: #110934;
+    text-align: center;
 }
 
 /* Style rules for navigation area */
@@ -59,41 +59,45 @@ nav li a {
 
 /* Style rules for the main content  */
 main {
-	display: block;
-	font-family: Georgia, "Times New Roman", sans-serif;
-	font-size: 1em;
-	padding: 1em;
-	background-color: #FFFFFF;
-	border-top: solid 0.2em #110934; 
-	border-bottom: solid 0.2em #110934;
+    display: block;
+    font-family: Georgia, "Times New Roman", sans-serif;
+    font-size: 1em;
+    padding: 1em;
+    background-color: #FFFFFF;
+    border-top: solid 0.2em #110934;
+    border-bottom: solid 0.2em #110934;
 }
 
 /* Style rule for footer */
 footer {
-	font-size: .70em;
-	text-align: center;
-	margin-top: 2em;
+    font-size: .70em;
+    text-align: center;
+    margin-top: 2em;
     color: #fff;
 }
 
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 481px), print {
-    
+@media screen and (min-width: 600px), print {   /* adjusted breakpoint for better nav fit */
+
     /* Tablet Viewport: Style rules for nav area */
     nav li {
         display: inline-block;
         margin: 0.5%;
     }
-    
+
     nav li a {
         padding: 0.1em 1em;
     }
-    
+
+    /* Tablet Viewport: Show tablet-desktop content */
+    .tablet-desktop {
+        display: block;
+    }
 }
 
 /* Media Query for Desktop Viewport */
-@media screen and (min-width: 769px), print {
- 
+@media screen and (min-width: 900px), print {
+
     /* Desktop Viewport: Style rules for nav */
     nav li {
         border-radius: 0;
@@ -107,7 +111,7 @@ footer {
     /* Desktop Viewport: Style rules for the main content */
     main {
         border-style: none;
-        margin-bottom: 1em 0;
+        margin-bottom: 1em;
         overflow: auto;
     }
 
@@ -116,4 +120,36 @@ footer {
         clear: left;
     }
 
+    /* Desktop Viewport: Style rule for header */
+    /* Desktop Viewport: Header floats left */
+    header {
+        width: 25%;
+        float: left;
+    }
+
+    /* Desktop Viewport: Navigation aligned right */
+    nav ul {
+        text-align: right;
+    }
+
+    /* Desktop Viewport: Hover effect for nav links */
+    nav li a:hover {
+        color: #4424d6;
+        background-color: #e5e0fa;
+    }
+
+    /* Desktop Viewport: Column content layout */
+    .col-content {
+        width: 30%;
+        float: left;
+        padding: 1.5%;
+    }
+}
+
+/* Media Query for Large Desktop Viewport */
+@media screen and (min-width: 1441px) {
+    #container {
+        width: 1440px;
+        margin: 0 auto;
+    }
 }
