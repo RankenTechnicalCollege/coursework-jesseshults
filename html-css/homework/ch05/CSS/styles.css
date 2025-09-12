@@ -1,0 +1,93 @@
+/* 
+  Author: Jesse Shults
+  File: styles.css
+  Date: 09/11/2025
+*/
+
+/* Base Styling - Mobile First */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4ff;
+  color: #333;
+}
+
+header {
+  background: #3f51b5;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  background: #283593;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  border-bottom: 1px solid #444;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem;
+}
+
+nav a:hover {
+  background: #5c6bc0;
+}
+
+main {
+  padding: 1rem;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  background: #3f51b5;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Layout - Larger Screens */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.125rem; /* slightly larger text */
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav li {
+    border: none;
+  }
+
+  nav a {
+    padding: 1rem 2rem;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
