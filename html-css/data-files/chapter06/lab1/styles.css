@@ -1,34 +1,60 @@
 /*
 Author: Jesse Shults
-Date: 09/06/2025
-File Name: styles.css*/
+Date: 09/11/2025
+File Name: styles.css
+*/
 
-
-/*CSS reset */
-body, header, nav, main, footer, img, h1{
+/* ============================= */
+/* CSS Reset */
+/* ============================= */
+body, header, nav, main, footer, img, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-/*style rule for images*/
+/* ============================= */
+/* General Styles */
+/* ============================= */
+body {
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #e5e9fc, #c0caf7);
+    color: #000;
+}
+
 img {
     max-width: 100%;
     display: block;
+    margin: 0 auto;
 }
 
-/*styles rules for header content */
+/* ============================= */
+/* Header */
+/* ============================= */
 header {
     text-align: center;
     font-size: 3em;
     color: #373684;
+    padding: 1% 0;
 }
 
 header h1 {
     font-style: italic;
 }
 
-/* styles rules for navigation area */
+/* Decorative Banner Image (Music Notes) */
+.banner-img {
+    width: 100%;
+    height: 150px;          /* smaller default for mobile */
+    object-fit: contain;    /* show full notes on small screens */
+    border-bottom: 5px solid #373684;
+    margin-bottom: 0.5em;
+}
+
+/* ============================= */
+/* Navigation */
+/* ============================= */
 nav {
     background-color: #373684;
 }
@@ -36,12 +62,13 @@ nav {
 nav ul {
     list-style-type: none;
     margin: 0;
+    padding: 0;
     text-align: center;
 }
 
 nav li {
-    display:inline-block;
-    font-size: 2em;
+    display: inline-block;
+    font-size: 1.25em;
 }
 
 nav li a {
@@ -52,60 +79,185 @@ nav li a {
     text-decoration: none;
 }
 
-/* Style rules for main content */
+/* ============================= */
+/* Main Content */
+/* ============================= */
 main {
-  padding: 2%;
-  background-color: #e5e9fc;
-  overflow: auto;
-  font-family: Verdana, Arial, sans-serif;
+    padding: 2%;
+    background-color: #e5e9fc;
+    overflow: auto;
 }
 
-main p {
-  font-size: 1.25em;
+main h2 {
+    color: #373684;
+    margin-bottom: 0.5em;
+}
+
+main p, main li {
+    font-size: 1.1em;
+    margin-bottom: 1em;
 }
 
 .action {
-  font-size: 1.75em;
-  color: #373684;
-  font-weight: bold;
+    font-size: 1.25em;
+    color: #373684;
+    font-weight: bold;
 }
 
+/* Lessons Sections */
 #piano, #guitar, #violin {
-  width: 29%;
-  float: left;
-  margin: 0 2%;
+    width: 29%;
+    float: left;
+    margin: 0 2% 2% 0;
 }
 
 #info {
-  clear: left;
-  background-color: #c0caf7;
-  padding: 1% 2%;
+    clear: left;
+    background-color: #c0caf7;
+    padding: 1% 2%;
 }
 
+/* Contact Section */
 #contact {
-  text-align: center;
+    text-align: center;
 }
 
 #contact a {
-  color: #4645a8;
-  text-decoration: none;
-  font-weight: bold;
+    color: #4645a8;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .map {
     border: 5px solid #373684;
+    width: 100%;
+    height: 450px;
 }
 
-
-
-/* Style rules for footer content */
+/* ============================= */
+/* Footer */
+/* ============================= */
 footer {
-  text-align: center;
-  font-size: 0.65em;
-  clear: left;
+    text-align: center;
+    font-size: 0.85em;
+    padding: 1%;
+    background-color: #f4f4f4;
+    border-top: 3px solid #373684;
 }
 
 footer a {
-  color: #4645a8;
-  text-decoration: none;
+    color: #4645a8;
+    text-decoration: none;
+}
+
+/* ============================= */
+/* Tablet Viewport Styles */
+/* ============================= */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+
+    /* Tablet: Nav Area */
+    nav li {
+        display: inline-block;
+        font-size: 1.5em;
+        border-right: 1px solid #e5e9fc;
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav li a {
+        padding: 0.25em 0.5em;
+    }
+
+    /* Tablet: Banner Image */
+    .banner-img {
+        height: 200px;      
+        object-fit: cover;  
+    }
+
+    /* Tablet: Map */
+    .map {
+        width: 500px;
+        height: 450px;
+        margin: 0 auto;
+    }
+}
+
+/* ============================= */
+/* Desktop Viewport Styles */
+/* ============================= */
+@media screen and (min-width: 769px) {
+
+    /* Desktop: Header */
+    header {
+        padding: 2%;
+    }
+
+    /* Desktop: Nav Area */
+    nav li a {
+        padding: 0.5em 1.5em;
+    }
+
+    nav li a:hover {
+        color: #373684;
+        background-color: #e5e9fc;
+    }
+
+    /* Desktop: Banner Image */
+    .banner-img {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    /* Desktop: Main Content */
+    #info ul {
+        margin-left: 5%;
+    }
+
+    main h3 {
+        font-size: 1.5em;
+    }
+
+    #piano, #guitar, #violin {
+        width: 29%;
+        float: left;
+        margin: 0 2%;
+    }
+}
+
+/* ============================= */
+/* Large Desktop Viewport Styles */
+/* ============================= */
+@media screen and (min-width: 1200px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    main {
+        font-size: 1.15em;
+    }
+
+    .banner-img {
+        height: 300px;   
+    }
+}
+
+/* ============================= */
+/* Print Styles */
+/* ============================= */
+@media print {
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    nav, footer, .map, img {
+        display: none;
+    }
+
+    main {
+        font-size: 12pt;
+    }
 }

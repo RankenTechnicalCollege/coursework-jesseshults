@@ -1,0 +1,188 @@
+/*
+Author: Jesse Shults
+Date: 09/11/2025
+File Name: styles.css
+*/
+
+/* ============================= */
+/* CSS Reset */
+/* ============================= */
+body, header, nav, main, footer, img, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* ============================= */
+/* General Styles */
+/* ============================= */
+body {
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.6;
+    background: #fdfbf9;
+    color: #2a1f14;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ============================= */
+/* Banner and Header */
+/* ============================= */
+.banner-container {
+    position: relative;
+    text-align: left;
+    color: #2a1f14;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    border-bottom: 5px solid #2a1f14;
+}
+
+header {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(255,255,255,0.9);
+}
+
+header h3 {
+    font-size: 1.5em;
+    font-style: italic;
+    margin: 0.25em 0 0 0;
+    text-shadow: 2px 2px 5px rgba(255,255,255,0.9);
+}
+
+/* ============================= */
+/* Navigation */
+/* ============================= */
+nav {
+    background-color: #2a1f14;
+    text-align: center;
+}
+
+nav p {
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #e5e9fc;
+    color: #2a1f14;
+}
+
+/* ============================= */
+/* Main Content */
+/* ============================= */
+main {
+    padding: 2%;
+    background-color: #f9f3e9;
+    overflow: auto;
+}
+
+main h2 {
+    color: #2a1f14;
+    margin-bottom: 0.5em;
+}
+
+main p, main li {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+.content-img {
+    width: 250px;
+    height: auto;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+/* ============================= */
+/* Contact Section */
+/* ============================= */
+#contact {
+    text-align: center;
+    background-color: #f9f3e9;
+    padding: 2em;
+}
+
+#contact a {
+    color: #2a1f14;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ============================= */
+/* Footer */
+/* ============================= */
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    padding: 1em;
+    background-color: #2a1f14;
+    color: #fff;
+    border-top: 3px solid #000;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+@media screen and (max-width: 768px) {
+    .banner-img {
+        height: 180px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header h3 {
+        font-size: 1.2em;
+    }
+
+    .content-img {
+        float: none;
+        display: block;
+        margin: 1em auto;
+    }
+}
+
+@media print {
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    nav, footer, .banner-container {
+        display: none;
+    }
+
+    main {
+        font-size: 12pt;
+    }
+}
