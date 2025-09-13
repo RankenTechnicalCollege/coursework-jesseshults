@@ -21,10 +21,9 @@ img {
     display: block;
 }
 
-/* Style rules for mobile viewport */
-
-
-/* Add style rules that display the mobile class selector as a block and hide the tab-desk class selector */
+/* ======================
+   Mobile Viewport
+   ====================== */
 .mobile {
     display: block;
     padding: 2%;
@@ -35,8 +34,7 @@ img {
     display: none;
 }
 
-
-/* Style rules for header area */
+/* Header */
 h1, h3 {
     text-align: center;
     color: #2a1f14;
@@ -51,8 +49,7 @@ h1, h3 {
     font-family: 'Lora', serif;
 }
 
-
-/* Style rules for navigation area */
+/* Navigation */
 nav {
     background-color: #2a1f14;
 }
@@ -60,7 +57,6 @@ nav {
 nav ul {
     list-style-type: none;
     text-align: center;
-    /* margin removed because reset handles it */
 }
 
 nav li {
@@ -78,8 +74,7 @@ nav li a {
     text-decoration: none;
 }
 
-
-/* Style rules for main content */
+/* Main content */
 main {
     padding: 2%;
     font-family: 'Lora', serif;
@@ -135,8 +130,7 @@ main ul {
     font-weight: bold;
 }
 
-
-/* Style rules for footer content */
+/* Footer */
 footer {
     text-align: center;
     font-size: 0.85em;
@@ -148,4 +142,84 @@ footer {
 footer a {
     color: #f3e6d8;
     text-decoration: none;
+}
+
+/* ======================
+   Media Query for Tablet Viewport
+   ====================== */
+@media screen and (min-width: 620px), print {
+
+    /* Tablet Viewport: Show tab-desk class, hide mobile class */
+    .tab-desk {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* Tablet Viewport: Nav styling */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.25em;
+    }
+
+    nav li a {
+        padding: 0.5em;
+    }
+}
+
+/* ======================
+   Media Query for Desktop Viewport
+   ====================== */
+@media screen and (min-width: 1000px), print {
+
+    /* Desktop Nav */
+    nav li {
+        font-size: 1.5em;
+    }
+
+    nav li a {
+        padding: 0.5em 1.5em;
+    }
+
+    nav li a:hover {
+        color: #2a1f14;
+        background-color: #f6eee4;
+    }
+
+    /* Desktop Main Content */
+    #info ul {
+        margin-left: 5%;
+    }
+}
+
+/* ======================
+   Media Query for Large Desktop Viewport
+   ====================== */
+@media screen and (min-width: 1921px) {
+
+    body {
+        background: linear-gradient(#f6eee4, #78593a);
+    }
+
+    #wrapper {
+        width: 1920px;
+        margin: 0 auto;
+    }
+
+    main {
+        background-color: #f6eee4;
+    }
+}
+
+/* ======================
+   Media Query for Print
+   ====================== */
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
 }
