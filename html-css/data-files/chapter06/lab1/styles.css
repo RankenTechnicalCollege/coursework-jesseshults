@@ -1,234 +1,173 @@
 /*
-Author: Jesse Shults
-Date: 09/11/2025
-File Name: styles.css
-*/
-
-/* CSS reset */
-body, header, nav, main, footer, img, h1, ul {
-    margin: 0;
-    padding: 0;
-    border: 0;
+   Student Name: Jesse Shults
+   File Name: styles.css
+   Date: 09/11/2025*/
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Style rule for images */
-img {
-    max-width: 100%;
-    display: block;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0ff;
+  line-height: 1.6;
 }
 
-/* Style rules for mobile viewport */
-.tab-desk {
-    display: none;
+h1, h2, h3 {
+  font-family: 'DM Serif Display', serif;
 }
 
-.mobile {
-    display: block;
-}
-
-/* Style rules for header content */
-header {
-    text-align: center;
-    font-size: 1.5em;
-    color: #373684;
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: white;
+  border: 5px solid #000;
 }
 
 header h1 {
-    font-family: 'DM Serif Display', serif;
+  font-family: 'DM Serif Display', serif;
+  font-size: 2em;
+  color: #2c2c7c;
 }
 
-/* Style rules for navigation area */
+.music {
+  color: #4b2e83;
+}
+
 nav {
-    background-color: #373684;
+  background-color: #4b2e83;
 }
 
 nav ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
-    display: block;
-    border-top: 1px solid #e5e9fc;
+  margin: 0;
 }
 
-nav li a {
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 0.5em 1em;
-    text-decoration: none;
+nav a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
 }
 
-/* Style rules for main content */
-main {
-    padding: 2%;
-    background-color: #e5e9fc;
-    overflow: auto;
-    font-family: 'Roboto', sans-serif;
+nav a:hover {
+  background-color: #372066;
 }
 
-main p {
-    font-size: 1.25em;
+.hero-img {
+  width: 100%;
+  display: block;
 }
 
-.action {
-    font-size: 1.25em;
-    color: #373684;
-    font-weight: bold;
+.intro-section {
+  padding: 20px;
+  background-color: #e6e6f8;
 }
 
-#piano, #guitar, #violin {
-    margin: 0 0 2% 0;
+.highlight {
+  color: #800080;
+  font-weight: bold;
 }
 
-#info {
-    clear: left;
-    background-color: #c0caf7;
-    padding: 1% 2%;
+
+/* ===== Lessons Page ===== */
+.intro-section h2 {
+  margin-bottom: 10px;
+  color: #2c2c7c;
 }
 
-#info ul {
-    margin-left: 10%;
+.intro-section ul {
+  margin-top: 10px;
+  padding-left: 20px;
 }
 
-.round {
-    border-radius: 8px;
+.lessons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
 
-/* Contact styles */
+.lesson-box {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.lesson-box img {
+  width: 180px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.lesson-box h3 {
+  margin-top: 0;
+  color: #4b2e83;
+}
+
+/* ===== Contact Page ===== */
 #contact {
-    text-align: center;
+  padding: 20px;
 }
 
-#contact .email-link {
-    color: #4645a8;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Phone button */
 .tel-link {
-    background-color: #373684;
-    padding: 2%;
-    margin: 0 auto;
-    width: 80%;
-    text-align: center;
-    border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
-.tel-link a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    display: block;
+.email-link {
+  color: #4b2e83;
 }
 
-/* Map adjustments */
 .map {
-    border: 5px solid #373684;
-    width: 95%;
-    height: 50%;
+  margin-top: 20px;
 }
 
-/* Style rules for footer content */
+/* ===== Footer ===== */
 footer {
+  text-align: center;
+  background-color: #ddd;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .lesson-box {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    font-size: 0.65em;
-    clear: left;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 10px;
+    border-bottom: 1px solid #5c3a91;
+  }
 }
 
-footer a {
-    color: #4645a8;
-    text-decoration: none;
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .lesson-box img {
+    width: 100%;
+    max-width: 300px;
+  }
 }
-
-/* ===============================
-   Media Query for Tablet Viewport
-   =============================== */
-@media screen and (min-width: 550px), print {
-
-    /* Tablet Viewport: Show tab-desk class, hide mobile class */
-    .tab-desk {
-        display: block;
-    }
-
-    .mobile {
-        display: none;
-    }
-
-    /* Tablet Viewport: Style rule for header content */
-    span.tab-desk {
-        display: inline;
-    }
-
-    /* Tablet Viewport: Style rules for nav area */
-    nav li {
-        border-top: none;
-        display: inline-block;
-        font-size: 1.5em;
-        border-right: 1px solid #e5e9fc;
-    }
-
-    nav li:last-child {
-        border-right: none;
-    }
-
-    nav li a {
-        padding: 0.25em 0.5em;
-    }
-
-    /* Tablet Viewport: Style rule for map */
-    .map {
-        width: 500px;
-        height: 450px;
-    }
-}
-
-/* ===============================
-   Media Query for Desktop Viewport
-   =============================== */
-@media screen and (min-width: 769px), print {
-
-    /* Desktop Viewport: Style rule for header */
-    header {
-        padding: 2%;
-    }
-
-    /* Desktop Viewport: Style rules for nav area */
-    nav li a {
-        padding: 0.5em 1.5em;
-    }
-
-    nav li a:hover {
-        color: #373684;
-        background-color: #e5e9fc;
-    }
-
-    /* Desktop Viewport: Style rules for main content */
-    #info ul {
-        margin-left: 5%;
-    }
-
-    main h3 {
-        font-size: 1.5em;
-    }
-
-    #piano, #guitar, #violin {
-        width: 29%;
-        float: left;
-        margin: 0 2%;
-    }
-}
-
-/* ===============================
-   Media Query for Print
-   =============================== */
-@media print {
-    body {
-        background-color: #fff;
-        color: #000;
-    }
-}
-

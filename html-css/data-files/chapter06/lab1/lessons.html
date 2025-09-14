@@ -1,80 +1,76 @@
-<!DOCTYPE html>
 <!--
    Student Name: Jesse Shults
    File Name: lessons.html
    Date: 09/11/2025
 -->
-
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Strike a Chord: Lessons</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Roboto&display=swap" rel="stylesheet">
+  <title>Strike a Chord: Lessons</title>
 </head>
-
 <body>
-
+  <div class="container">
     <header>
-        <h1><span class="tab-desk">&#9836;</span> Strike a Chord <span class="tab-desk">&#9836;</span></h1>
+      <h1><span class="music">&#9836;</span> Strike a Chord <span class="music">&#9836;</span></h1>
     </header>
-
     <nav>
-        <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="lessons.html">Lessons</a></li>
-            <li><a href="instructors.html">Instructors</a></li>
-            <li><a href="rentals.html">Rentals</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="instructors.html">Instructors</a></li>
+        <li><a href="rentals.html">Rentals</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-
-    <div id="hero" class="tab-desk">
-        <img src="images/music-notes.png" alt="Decorative music notes" class="banner-img">
+    <div id="hero">
+      <img src="images/music-notes.png" alt="Colorful music notes" class="hero-img">
     </div>
-
     <main>
+      <section class="intro-section">
         <h2>Private Lessons</h2>
         <p>We make learning music fun! We offer private lessons for piano, guitar, and violin. Contact us today to schedule your first lesson for free!</p>
-
-        <p>We provide:</p>
         <ul>
-            <li>Dedicated and Professional Instructors</li>
-            <li>No Long-Term Contracts</li>
-            <li>Flexible Schedule</li>
-            <li>Spring and Winter Performances</li>
-            <li>Summer Camps</li>
+          <li>Dedicated and Professional Instructors</li>
+          <li>No Long-Term Contracts</li>
+          <li>Flexible Schedule</li>
+          <li>Spring and Winter Performances</li>
+          <li>Summer Camps</li>
         </ul>
+      </section>
 
-        <!-- Piano Lessons -->
-        <div id="piano">
+      <div class="lessons">
+        <div class="lesson-box">
+          <img src="images/piano-lesson.jpg" alt="Piano Lesson">
+          <div>
             <h3>Piano Lessons</h3>
-            <img src="images/piano-lesson.jpg" alt="piano teacher and student sitting at a piano" class="round">
-            <p>We offer piano lessons for all ages, beginning at age three. Whether you are a beginner or have been playing the piano for a while, we have a program to suit your needs. Learn new techniques, theory, harmony, and tone. Learning how to play the piano helps develop hand-eye coordination and self-confidence.</p>
+            <p>We work with students at the beginning or advanced level. Whether you're new to the piano or have been playing for years, our teachers can prepare you to read music, learn techniques, and grow your confidence.</p>
+          </div>
         </div>
 
-        <!-- Guitar Lessons -->
-        <div id="guitar">
+        <div class="lesson-box">
+          <img src="images/child-guitar.jpg" alt="Guitar Lesson">
+          <div>
             <h3>Guitar Lessons</h3>
-            <img src="images/child-guitar.jpg" alt="child with a smile holding a guitar" class="round">
-            <p>We teach acoustic guitar, electric guitar, bass guitar, and ukulele. We have guitar lessons for beginners, intermediate players, and advanced players. Improve your skills with weekly lessons. Learn new tips and techniques from experienced instructors. We also have a rock band program that you can join!</p>
+            <p>Learn acoustic or electric guitar. Whether you're a beginner, intermediate, or advanced student, we have a lesson plan for you. Lessons are taught by experienced musicians in a relaxed setting.</p>
+          </div>
         </div>
 
-        <!-- Violin Lessons -->
-        <div id="violin">
+        <div class="lesson-box">
+          <img src="images/woman-violin.jpg" alt="Violin Lesson">
+          <div>
             <h3>Violin Lessons</h3>
-            <img src="images/woman-violin.jpg" alt="woman playing the violin" class="round">
-            <p>We offer violin lessons for all ages, beginning at age six. Our violin lessons include a variety of music styles, from fiddle to classical. Our instructors will help you fine-tune techniques and accomplish your musical goals. We work with you to create a customized program, tailored to your needs.</p>
+            <p>Violin is one of our top-requested instruments. Our violin instructors will help you master form, bow technique, and musicality. Students can also audition for youth orchestras or participate in recitals.</p>
+          </div>
         </div>
+      </div>
     </main>
-
     <footer>
-        <p>&copy; 2025 Strike a Chord. All Rights Reserved.</p>
-        <p>Email us at: <a href="mailto:lessons@strikeaChord.net">lessons@strikeaChord.net</a></p>
+      <p>&copy; 2025 Strike a Chord. All Rights Reserved.</p>
     </footer>
-
+  </div>
 </body>
 </html>
-
