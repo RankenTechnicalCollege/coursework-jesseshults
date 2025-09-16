@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Survey</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <h2>Music Survey</h2>
+  <form action="#" method="post">
+
+    <fieldset>
+      <legend>Select your favorite music genre</legend>
+      <label><input type="radio" name="genre" value="Rock"> Rock</label>
+      <label><input type="radio" name="genre" value="Pop"> Pop</label>
+      <label><input type="radio" name="genre" value="Hip Hop"> Hip Hop</label>
+      <label><input type="radio" name="genre" value="Country"> Country</label>
+      <label><input type="radio" name="genre" value="R&B"> R&B</label>
+      <label><input type="radio" name="genre" value="Other"> Other</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Select what music services you use (one or more)</legend>
+      <label><input type="checkbox" name="service" value="Spotify"> Spotify</label>
+      <label><input type="checkbox" name="service" value="Apple Music"> Apple Music</label>
+      <label><input type="checkbox" name="service" value="Amazon Music"> Amazon Music</label>
+      <label><input type="checkbox" name="service" value="Youtube Music"> YouTube Music</label>
+      <label><input type="checkbox" name="service" value="iHeart Radio"> iHeart Radio</label>
+      <label><input type="checkbox" name="service" value="Other"> Other</label>
+    </fieldset>
+
+    <label for="purpose">What does music do for you?</label>
+    <select id="purpose" name="purpose" size="3">
+      <option>Relax</option>
+      <option>Motivate</option>
+      <option>Focus</option>
+      <option>Other</option>
+    </select>
+
+    <label for="favoriteSong">What's your favorite song and what does it mean to you?</label>
+    <textarea id="favoriteSong" name="favoriteSong" cols="60" rows="3"></textarea>
+
+    <div class="buttons">
+      <input type="submit" value="Submit" class="submit-btn">
+      <input type="reset" value="Reset" class="reset-btn">
+    </div>
+
+  <div class="footer">
+  <p><strong>Name:</strong> Jesse Shults</p>
+  <p><strong>E-Mail:</strong> Jesse_Shults@insideranken.org</p>
+</div>
+
+  </form>
+
+</body>
+</html>
