@@ -1,7 +1,7 @@
 /* 
 Author: Jesse Shults
 Date: 09/16/2025
-File: style.css
+File: styles.css
 */
 
 /* === Reset Styles === */
@@ -103,8 +103,19 @@ main ul {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
-.grid article h3 {
+.grid article h3, 
+.grid article h4 {
   margin-bottom: 0.5em;
+}
+
+/* Responsive Map */
+.map {
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  height: 350px;
+  display: block;
+  margin: 1em auto;
 }
 
 /* Footer */
@@ -220,4 +231,5 @@ footer a:hover {
     font-size: 0.9em;
   }
 }
+
 
