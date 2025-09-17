@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!-- 
+  Name: Jesse Shults
+  File: pricelist.html
+  Date: 09/17/2025
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,6 +11,7 @@
   <title>Prices - Fluffy's Grooming</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
 </head>
 
 <body>
@@ -19,12 +25,14 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="pricelist.html" class="active">Prices</a></li>
+      <li><a href="groomers.html">Groomers</a></li>
     </ul>
   </nav>
 
   <main>
     <h2>Our Prices</h2>
-    <div id="price-list">
+    <section id="price-list">
+      <h3>Services & Rates</h3>
       <ul>
         <li>Small Dog Grooming - $40</li>
         <li>Medium Dog Grooming - $55</li>
@@ -32,11 +40,17 @@
         <li>Nail Trimming - $15</li>
         <li>Bath & Brush - $25</li>
       </ul>
-      <div class="price-images">
-        <img src="images/dog-nail-trim.jpg" alt="dog nail trim">
-        <img src="images/dog-bath.jpg" alt="dog bath">
-      </div>
-    </div>
+
+      <figure>
+        <img src="images/dog-nail-trim.jpg" alt="Dog nail trim">
+        <figcaption>Nail trimming keeps paws healthy.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/dog-bath.jpg" alt="Dog bath">
+        <figcaption>Fresh and clean after a bath!</figcaption>
+      </figure>
+    </section>
   </main>
 
   <footer>
@@ -44,3 +58,5 @@
   </footer>
 </body>
 </html>
+
+
