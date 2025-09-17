@@ -1,0 +1,228 @@
+/* Author: Jesse Shults
+   Date: 09/11/2025
+   File: styles.css */
+
+/* ============================= */
+/* CSS Reset */
+/* ============================= */
+body, header, nav, main, footer, img, h1, h2, h3, p, ul, li, aside, figure, figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* ============================= */
+/* General Styles */
+/* ============================= */
+body {
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.6;
+    background: #fdfbf9;
+    color: #2a1f14;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ============================= */
+/* Banner and Header */
+/* ============================= */
+.banner-container {
+    position: relative;
+    text-align: left;
+    color: #2a1f14;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    border-bottom: 5px solid #2a1f14;
+}
+
+header {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(255,255,255,0.9);
+}
+
+header h3 {
+    font-size: 1.5em;
+    font-style: italic;
+    margin: 0.25em 0 0 0;
+    text-shadow: 2px 2px 5px rgba(255,255,255,0.9);
+}
+
+/* ============================= */
+/* Navigation */
+/* ============================= */
+nav {
+    background-color: #2a1f14;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0.5em 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #e5e9fc;
+    color: #2a1f14;
+}
+
+/* ============================= */
+/* Main Content */
+/* ============================= */
+main {
+    padding: 2%;
+    background-color: #f9f3e9;
+    overflow: auto;
+}
+
+main h2 {
+    color: #2a1f14;
+    margin-bottom: 0.5em;
+}
+
+main p, main li {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+.content-img {
+    width: 250px;
+    height: auto;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+/* ============================= */
+/* Gallery Styles */
+/* ============================= */
+aside {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px #c5a687;
+    margin-bottom: 1em;
+}
+
+figure {
+    border: 4px solid #2a1f14;
+    box-shadow: 6px 6px 10px #c5a687;
+    max-width: 400px;
+    margin: 2% auto;
+}
+
+figcaption {
+    padding: 2%;
+    border-top: 4px solid #2a1f14;
+    background: #fff;
+    font-size: 0.95em;
+}
+
+/* ============================= */
+/* Contact Section */
+/* ============================= */
+#contact {
+    text-align: center;
+    background-color: #f9f3e9;
+    padding: 2em;
+}
+
+#contact a {
+    color: #2a1f14;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ============================= */
+/* Footer */
+/* ============================= */
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    padding: 1em;
+    background-color: #2a1f14;
+    color: #fff;
+    border-top: 3px solid #000;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+@media screen and (max-width: 768px) {
+    .banner-img { height: 180px; }
+    header h1 { font-size: 2em; }
+    header h3 { font-size: 1.2em; }
+    .content-img { float: none; margin: 1em auto; }
+}
+
+@media screen and (min-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    aside { grid-column: 1 / span 2; }
+}
+
+@media screen and (min-width: 1024px) {
+    nav a:hover { opacity: 0.5; }
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+    aside {
+        grid-column: 1 / span 3;
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    aside {
+        grid-column: 1 / span 4;
+        font-size: 3em;
+    }
+}
+
+@media print {
+    body { background: #fff; color: #000; }
+    nav, footer, .banner-container { display: none; }
+    main { font-size: 12pt; }
+}
+
