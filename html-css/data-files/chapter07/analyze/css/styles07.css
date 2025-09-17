@@ -1,40 +1,45 @@
 /*
-Author:
-Date:
-File Name: 
+Author: Jesse Shults
+Date: 09/16/2025
+File Name: styles07.css
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, h3, div {
+body, header, nav, main, footer, h1, h3, article, section, aside, ul, li {
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
-/* Style rule for body */
+/* Body */
 body {
 	background-color: #ffebdc;
+	font-family: Verdana, Arial, sans-serif;
 }
 
-/* Style rules for mobile viewport */
-
-/* Style rule for header */
+/* Header */
 header {
-	font-family: Verdana, Arial, sans-serif;
 	margin-top: 0.2em;
 	background-color: #9d4502;
 	color: #feab6d;
 	padding: 2%;
 }
 
-/* Style rules for nav area */
+/* Nav */
 nav {
 	background-color: #341c09;
 	padding: 0.5%;
+	text-align: center;
+}
+
+nav ul {
+	list-style-type: none;
 }
 
 nav li {
 	display: inline;
+	margin: 0 0.5em;
 }
 
 nav li a {
@@ -43,7 +48,11 @@ nav li a {
 	text-decoration: none;
 }
 
-/* Style rules for main content  */
+nav li a:hover {
+	text-decoration: underline;
+}
+
+/* Main */
 main {
 	padding: 1em;
 }
@@ -51,37 +60,52 @@ main {
 main h1 {
     color: #341c09;
     text-align: center;
-    margin-top: 2%;
+    margin: 2% 0;
 }
 
+/* Section */
 section {
+    background-color: #9d4502;
     color: #fff;
     padding: 3%;
+    margin: 1% 0;
+    border-radius: 5px;
 }
 
-article {
-    padding: 2%;
-}
-
+/* Aside */
 aside {
     background-color: #feab6d;
     padding: 2%;
     margin-top: 1%;
     color: #9d4502;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     font-style: italic;
     text-align: center;
     border-radius: 15px;
+    text-shadow: 4px 4px 8px #fc7307;
+    box-shadow: 4px 4px 10px #183440;
 }
 
+/* Footer */
 footer {
-	font-size: .70em;
+	font-size: 0.8em;
 	text-align: center;
+	padding: 1em;
+	background-color: #341c09;
+	color: #fff;
+	margin-top: 2%;
 }
 
-/* Media Query for Tablet Viewport */
+/* Tablet Viewport */
 @media screen and (min-width: 700px), print {
-    
-    
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    aside {
+        grid-column: span 3;
+    }
 }

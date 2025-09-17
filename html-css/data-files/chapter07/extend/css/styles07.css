@@ -1,41 +1,66 @@
 /*
-Author:
-Date:
-File Name: 
+Author: Jesse Shults
+Date: 09/16/2025
+File Name: styles07.css
 */
 
 /* CSS Reset */
-body, header, main, footer, h1, h3, section, article {
+body, header, main, footer, h1, h3, section, article, aside {
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
-/* Style rule for body */
+/* Body */
 body {
-	background-color: #dfe7c4;
+    background-color: #dfe7c4;
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.5;
 }
 
-/* Style rule for header */
+/* Header */
 header {
-	font-family: Verdana, Arial, sans-serif;
-	margin-top: 0.2em;
-	background-color: #628c45;
-	color: #dfe7c4;
-	padding: 2%;
+    margin-top: 0.2em;
+    background-color: #628c45;
+    color: #dfe7c4;
+    padding: 2%;
     text-align: center;
 }
 
-/* Style rules for main content  */
+/* Main */
 main {
-	background-color: #fff;
-}
-
-aside {
+    background-color: #fff;
     padding: 2%;
 }
 
+/* Article → Multi-column layout */
+article {
+    column-count: 3;
+    column-gap: 20px;
+    column-rule: 2px solid #628c45;
+    padding: 1em;
+}
+
+/* Section headings */
+section h3 {
+    color: #000;
+    margin-bottom: 0.5em;
+}
+
+/* Aside */
+aside {
+    padding: 2%;
+    background-color: #f5f5f5;
+    margin-top: 1em;
+    border-top: 2px solid #628c45;
+}
+
+/* Footer */
 footer {
-	font-size: .70em;
-	text-align: center;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 1em;
+    background-color: #628c45;
+    color: #fff;
 }

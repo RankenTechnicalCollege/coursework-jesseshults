@@ -1,40 +1,49 @@
 /*
-Author:
-Date:
-File Name: 
+Author: Jesse Shults
+Date: 09/16/2025
+File Name: apply07.css
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div {
+body, header, nav, main, footer, h1, h2, h3, article, section, aside, div, ul, li, p {
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 /* Style rule for body */
 body {
-	background-color: #c8dbE3;
+	background-color: #c8dbe3;
+	font-family: Verdana, Arial, sans-serif;
+	line-height: 1.5;
 }
 
-/* Style rules for mobile viewport */
-
-/* Style rule for header */
+/* Style rules for header */
 header {
-	font-family: Verdana, Arial, sans-serif;
-	margin-top: 0.2em;
 	background-color: #183440;
 	color: #fff;
 	padding: 2%;
+}
+
+header h1 {
+	font-size: 2em;
 }
 
 /* Style rules for nav area */
 nav {
 	background-color: #183440;
 	padding: 0.5%;
+	text-align: center;
+}
+
+nav ul {
+	list-style-type: none;
 }
 
 nav li {
 	display: inline;
+	margin: 0 0.5em;
 }
 
 nav li a {
@@ -43,25 +52,72 @@ nav li a {
 	text-decoration: none;
 }
 
-/* Style rules for main content  */
+nav li a:hover {
+	text-decoration: underline;
+}
+
+/* Style rules for main content */
 main {
 	padding: 1em;
 	background-color: #fff;
 }
 
+/* Section styles */
+section {
+	background-color: #183440;
+	color: #fff;
+	margin-top: 4%;
+	padding: 3%;
+}
+
+/* Article styles */
+article {
+	margin-top: 1%;
+	padding: 2%;
+}
+
+/* Aside styles */
+aside {
+	background-color: rgba(24, 52, 64, 0.3);
+	padding: 2%;
+	margin-top: 1%;
+	color: #183440;
+	box-shadow: 4px 4px 10px #183440;
+}
+
+/* Footer */
 footer {
-	font-size: .70em;
+	font-size: 0.8em;
 	text-align: center;
+	padding: 1em;
+	background-color: #f0f0f0;
+	margin-top: 1em;
 }
 
-/* Media Query for Tablet Viewport */
+/* ========================= */
+/* Tablet Viewport Styles    */
+/* ========================= */
 @media screen and (min-width: 650px), print {
-    
-    
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+
+	aside {
+		grid-column: span 2;
+	}
 }
 
-/* Media Query for Desktop Viewport */
+/* ========================= */
+/* Desktop Viewport Styles   */
+/* ========================= */
 @media screen and (min-width: 1024px), print {
+	.grid {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 
-    
+	aside {
+		grid-column: span 4;
+	}
 }
