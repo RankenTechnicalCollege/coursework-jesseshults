@@ -1,7 +1,7 @@
 /*
-Author:
-Date:
-File Name: 
+Author: Jesse Shults
+Date: September 17, 2025
+File Name: apply08.css
 */
 
 /* CSS Reset */
@@ -26,4 +26,40 @@ body {
 footer {
 	font-size: .70em;
 	text-align: center;
+}
+
+/* Table styling */
+/* Style rule for the table element */
+table {
+	width: 80%;
+	margin: 0 auto;
+	border: 3px solid #71881b;
+}
+
+/* Collapsing borders and adding padding */
+table, tr, th, td {
+	border-collapse: collapse;
+	padding: 2%;
+}
+
+/* Caption styling */
+caption {
+	font-size: 2em;
+	padding: 2%;
+	margin-top: 2%;
+}
+
+/* Table cell borders */
+th, td {
+	border: 1px solid #7188bb;
+}
+
+/* Center text in table data cells */
+td {
+	text-align: center;
+}
+
+/* Alternate row background for odd rows */
+tr:nth-child(odd) {
+	background-color: #d3e788;
 }

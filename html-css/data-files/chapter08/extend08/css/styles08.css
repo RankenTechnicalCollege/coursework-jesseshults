@@ -1,0 +1,62 @@
+/*
+Author: Jesse Shults
+Date: September 17, 2025
+File Name: styles08.css
+*/
+
+/* Set background and font */
+body {
+    background-color: #ffe5dc;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the container */
+#container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Style footer */
+footer {
+    font-size: 0.75em;
+    text-align: center;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border: 3px solid #fd4d0c;
+    box-shadow: 8px 8px 10px #792101;
+    border-collapse: collapse;
+    margin: 2em 0;
+}
+
+/* Caption style */
+caption {
+    font-size: 2em;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+/* Header cells */
+thead th {
+    background-color: #a22c02;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border: 1px solid #a22c02;
+}
+
+/* Data rows */
+td {
+    border: 1px solid #a22c02;
+    padding: 0.75em;
+    text-align: center;
+}
+
+/* Alternate row coloring */
+tbody tr:nth-child(odd) {
+    background-color: #fe9772;
+}

@@ -1,32 +1,70 @@
 /*
-Author:
-Date:
-File Name: 
+Author: Jesse Shults
+Date: September 17, 2025
+File Name: styles08.css
 */
 
-/* Style for body specifies a background color */
+/* Style for body specifies a background gradient and font */
 body {
 	background: linear-gradient(to top right, #fff 0%, #6699ff 100%) no-repeat fixed center;
     font-family: Geneva, Arial, sans-serif;
 }
 
-/* Style for the container element */
+/* Container layout */
 #container {
 	width: 90%;
 	margin: 0 auto;
 }
 
-/* Style rules for form elements */
-
-
-/* Style for the footer element */
+/* Footer styling */
 footer {
 	font-size: .9em;
 	text-align: center;
 }
 
-/* Media query for tablet layout */ 
+/* Style fieldset and input for mobile layout */
+fieldset,
+input {
+	margin-bottom: 2%;
+}
+
+/* Style fieldset legends */
+legend {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+/* Submit button styles */
+.btn {
+	border: none;
+	margin: 0 auto;
+	display: block;
+	padding: 5%;
+	background-color: #003399;
+	font-size: 1.25em;
+	border-radius: 10px;
+	color: #fff;
+}
+
+/* Tablet layout */
 @media only screen and (min-width: 600px) {
 
-    
+	/* Center form and define layout */
+	form {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	/* Grid layout for form elements */
+	.grid {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 20px;
+	}
+
+	/* Center submit button across both columns */
+	.btn {
+		grid-column: 1 / span 2;
+		padding: 3%;
+	}
 }
