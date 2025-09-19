@@ -5,7 +5,7 @@ File: styles.css
 */
 
 /* === Reset Styles === */
-body, header, nav, main, footer, h1, h2, h3, p, ul, li, img, figure, figcaption, article, section, aside {
+body, header, nav, main, footer, h1, h2, h3, p, ul, li, img, figure, figcaption, article, section, aside, form, input, select, textarea, button, table, th, td {
   margin: 0;
   padding: 0;
   border: 0;
@@ -31,7 +31,7 @@ header h1 {
   font-family: 'Lora', serif;
   font-size: 2em;
   margin-bottom: 0.3em;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Text shadow */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 header figure {
   margin: 1em auto;
@@ -43,7 +43,7 @@ header img.round-img {
   height: auto;
   display: block;
   margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Box shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 header figcaption {
   margin-top: 0.5em;
@@ -148,11 +148,66 @@ footer a:hover {
   display: none;
 }
 
+/* === Table Styles (Tablet/Desktop Only) === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75em;
+  text-align: left;
+}
+th {
+  background-color: #2a1f14;
+  color: white;
+}
+
+/* === Contact Form Styles === */
+.contact-form {
+  background: #f5f5f5;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 2em auto;
+}
+.contact-form label {
+  display: block;
+  margin: 0.5em 0 0.2em;
+  font-weight: bold;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-form button {
+  background-color: #2a1f14;
+  color: white;
+  padding: 0.75em 2em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.contact-form button:hover {
+  background-color: #f9c74f;
+  color: #222;
+  font-weight: bold;
+}
+
 /* ========================================================= */
 /* === Tablet Media Query (min-width: 600px) =============== */
 /* ========================================================= */
 @media (min-width: 600px) {
-  /* Horizontal navigation */
   nav ul {
     display: flex;
     justify-content: center;
@@ -167,7 +222,6 @@ footer a:hover {
     border-right: none;
   }
 
-  /* Hide mobile-only content, show tablet+ content */
   .mobile-only {
     display: none;
   }
@@ -178,7 +232,6 @@ footer a:hover {
     color: #444;
   }
 
-  /* Tablet typography */
   main h2 {
     font-size: 2em;
   }
@@ -186,7 +239,6 @@ footer a:hover {
     font-size: 1.2em;
   }
 
-  /* Projects grid → 2 columns */
   .grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -210,25 +262,33 @@ footer a:hover {
     transition: background-color 0.3s ease;
   }
 
-  /* Pseudo-class for desktop */
   nav a:hover {
     background-color: #f9c74f;
     color: #222;
     font-weight: bold;
   }
 
-  /* Larger images */
   header img.round-img {
     max-width: 300px;
   }
 
-  /* Projects grid → 3 columns */
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
   footer {
     font-size: 0.9em;
+  }
+
+  .contact-form {
+    padding: 2em;
+  }
+}
+
+/* === Hide Table on Mobile Only === */
+@media (max-width: 599px) {
+  table {
+    display: none;
   }
 }
 
