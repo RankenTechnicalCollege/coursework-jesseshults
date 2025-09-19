@@ -1,11 +1,13 @@
-/* Author: Jesse Shults
-   Date: 09/17/2025
-   File: styles.css */
+/*
+    Author: Jesse Shults
+    Date: 09/19/2025
+    File: styles.css
+*/
 
 /* ============================= */
 /* CSS Reset */
 /* ============================= */
-body, header, nav, main, footer, img, h1, h2, h3, p, ul, li, aside, figure, figcaption {
+body, header, nav, main, footer, img, h1, h2, h3, p, ul, li, aside, figure, figcaption, form, fieldset, input, label, textarea {
     margin: 0;
     padding: 0;
     border: 0;
@@ -39,7 +41,7 @@ img {
 
 .banner-img {
     width: 100%;
-    height: auto; 
+    height: auto;
     display: block;
     border-bottom: 5px solid #2a1f14;
 }
@@ -78,6 +80,7 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 0.5em 0;
+    flex-wrap: wrap;
 }
 
 nav li {
@@ -150,7 +153,7 @@ figcaption {
 /* ============================= */
 /* Contact Section */
 /* ============================= */
-#contact {
+#contact, #form h2 {
     text-align: center;
     background-color: #f9f3e9;
     padding: 2em;
@@ -160,6 +163,33 @@ figcaption {
     color: #2a1f14;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* ============================= */
+/* Style rules for form elements */
+/* ============================= */
+fieldset, input, textarea {
+    margin-bottom: 2%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding-top: 2%;
+}
+
+#submit {
+    margin: 0 auto;
+    display: block;
+    padding: 2%;
+    background-color: #78593a;
+    color: #f6eee4;
+    font-size: 1.25em;
+    border-radius: 10px;
 }
 
 /* ============================= */
@@ -183,30 +213,115 @@ footer a {
 /* Responsive Design */
 /* ============================= */
 @media screen and (max-width: 768px) {
-    .banner-img { height: 180px; }
-    header h1 { font-size: 2em; }
-    header h3 { font-size: 1.2em; }
-    .content-img { float: none; margin: 1em auto; }
+    .banner-img {
+        height: 180px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header h3 {
+        font-size: 1.2em;
+    }
+
+    .content-img {
+        float: none;
+        margin: 1em auto;
+    }
+
+    .mobile-tablet {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 768px) {
+    /* Tablet Viewport: Style rule for form element */
+    form {
+        width: 70%;
+        margin: 0 auto;
+    }
+
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
-    aside { grid-column: 1 / span 2; }
+
+    aside {
+        grid-column: 1 / span 2;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-    nav a:hover { opacity: 0.5; }
+    /* Desktop Viewport: Show desktop class, hide mobile-tablet class */
+    .desktop {
+        display: block;
+    }
+
+    .mobile-tablet {
+        display: none;
+    }
+
+    nav a:hover {
+        opacity: 0.5;
+    }
+
     .grid {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 30px;
     }
+
     aside {
         grid-column: 1 / span 3;
         font-size: 2em;
+    }
+
+    /* Desktop Viewport: Style rules for form elements */
+    form {
+        width: auto;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+
+    .btn {
+        grid-column: 1 / span 2;
+    }
+
+    /* Table styles */
+    table {
+        border: 1px solid #2a1f14;
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%;
+    }
+
+    th, td {
+        border: 1px solid #2a1f14;
+        padding: 1%;
+    }
+
+    th {
+        background-color: #2a1f14;
+        color: #fff;
+        font-size: 1.15em;
+    }
+
+    tr:nth-of-type(odd) {
+        background-color: #deccba;
     }
 }
 
@@ -214,6 +329,7 @@ footer a {
     .grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
     aside {
         grid-column: 1 / span 4;
         font-size: 3em;
@@ -221,8 +337,18 @@ footer a {
 }
 
 @media print {
-    body { background: #fff; color: #000; }
-    nav, footer, .banner-container { display: none; }
-    main { font-size: 12pt; }
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    nav, footer, .banner-container {
+        display: none;
+    }
+
+    main {
+        font-size: 12pt;
+    }
 }
+
 
