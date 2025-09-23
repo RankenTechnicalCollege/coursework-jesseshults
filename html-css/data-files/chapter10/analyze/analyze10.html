@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<!-- Student's Name, Today's Date -->
+<!-- Student's Name: Jesse Shults, 09/23/2025 -->
 <html lang="en">
 <head>
-	<title></title>
-	<meta charset="utf-8">
+    <title>Visit the Caribbean</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles10.css">
 </head>
 <body>
 
-	<div id="container">
+    <div id="container">
 
         <header>
             <h1>Visit the Caribbean</h1>
@@ -23,31 +24,30 @@
         </nav>
 
         <main>
-
-           <p>The Caribbean boasts several island hotspots for your perfect getaway! Enjoy crystal clear waters, sandy white beaches, and never-ending sun. Click the pictures below for a larger view.</p>
+            <p>
+                The Caribbean boasts several island hotspots for your perfect getaway!
+                Enjoy crystal clear waters, sandy white beaches, and never-ending sun.
+                Click the pictures below for a larger view.
+            </p>
 
             <figure>
-
-                <img src="images/trunk-bay-thumb.jpg" alt="Elevated view of Trunk Bay beach on St. John">
-                <img src="images/sanjuan-thumb.jpg" alt="Elevated view of San Juan coast">
-                <img src="images/curacao-thumb.jpg" alt="The blue waters of Curacao">
-
-           </figure>
-            
-            <figure id="placeholder">
-            
-                <img src="image" alt="placeholder" id="image">
-                <figcaption></figcaption>
-            
+                <img src="images/trunk-bay-thumb.jpg" alt="Elevated view of Trunk Bay beach on St. John" onclick="pic1()">
+                <img src="images/sanjuan-thumb.jpg" alt="Elevated view of San Juan coast" onclick="pic2()">
+                <img src="images/curacao-thumb.jpg" alt="The blue waters of Curacao" onclick="pic3()">
             </figure>
 
+            <figure id="placeholder">
+                <img src="images/trunk-bay.jpg" alt="placeholder" id="image">
+                <figcaption id="caption">Trunk Bay in St. John</figcaption>
+            </figure>
         </main>
 
         <footer>
-            <p>Student's Name:</p>
+            <p>Student's Name: Jesse Shults</p>
         </footer>
-        
-	</div>
-	
+
+    </div>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>

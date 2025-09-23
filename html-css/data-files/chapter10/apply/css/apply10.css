@@ -1,7 +1,7 @@
 /*
-    Student Name
-	File Name: 
-	Current Date: 
+    Student's Name
+    File Name: apply10.css
+    Date: 09/23/2025
 */
 
 /* CSS reset */
@@ -13,27 +13,25 @@ body, header, main, section, footer, h1, h2 {
 
 /* Style rule for body */
 body {
-	background-color: #f0d8d1;
+    background-color: #f0d8d1;
 }
-
 
 /* Style rules for header */
 header {
-	padding: 3%;
-	text-align: center;
-	font-size: 1.5em;
-	font-weight: bold;
+    padding: 3%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-/* Style rules for main content area  */
+/* Style rules for main content area */
 main {
-	font-family: Verdana, Arial, sans-serif;
-	font-size: 1em;
-	margin: 0 2%;
-	padding: 1em;
-	background-color: #fff;
-	border: 5px double #33091b; 
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1em;
+    margin: 0 2%;
     padding: 2%;
+    background-color: #fff;
+    border: 5px double #33091b;
 }
 
 h2 {
@@ -49,16 +47,37 @@ button {
     font-size: 1em;
 }
 
+/* Animation keyframes */
+@-webkit-keyframes color {
+    from { background-color: #fbdae9; }
+    to { background-color: #660b32; }
+}
+
+@keyframes color {
+    from { background-color: #fbdae9; }
+    to { background-color: #660b32; }
+}
+
+/* Square styling */
 .square {
     width: 200px;
     height: 200px;
     background-color: #33091b;
     margin-left: 6%;
+
+    -webkit-animation-name: color;
+    -webkit-animation-duration: 5s;
+    animation-name: color;
+    animation-duration: 5s;
+}
+
+.square:hover {
+    transform: translate(80px);
 }
 
 /* Style rules for the footer */
 footer {
-	font-size: .90em;
-	text-align: center;
-	margin-top: 2em;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 2em;
 }
