@@ -2,7 +2,7 @@
 <!-- 
   Name: Jesse Shults
   File: index.html
-  Date: 09/19/2025
+  Date: 09/22/2025
 -->
 <html lang="en">
 <head>
@@ -15,14 +15,13 @@
 </head>
 
 <body>
-<header>
-  <h1>Fluffy's Grooming</h1>
-  <figure>
-    <img src="images/dog-banner.jpg" alt="Happy dogs after grooming" class="banner">
-    <figcaption>Happy pets, happy owners - every time!</figcaption>
-  </figure>
-</header>
-
+  <header>
+    <h1>Fluffy's Grooming</h1>
+    <figure>
+      <img src="images/dog-banner.jpg" alt="Happy dogs after grooming" class="banner">
+      <figcaption>Happy pets, happy owners - every time!</figcaption>
+    </figure>
+  </header>
 
   <nav>
     <ul>
@@ -43,6 +42,16 @@
         <figcaption>A fresh bath leaves tails wagging!</figcaption>
       </figure>
       <p class="desktop-only">🐶 Visit our salon to see the difference in your pet's happiness after grooming!</p>
+
+      <!-- Added video element -->
+      <video controls poster="images/dog-banner.jpg">
+        <source src="media/groom.mp4" type="video/mp4">
+        <source src="media/groom.webm" type="video/webm">
+        <track src="media/captions.vtt" kind="captions" srclang="en" label="English Captions" default>
+        <track src="media/descriptions.vtt" kind="descriptions" srclang="en" label="English Descriptions">
+        <p>Your browser does not support the video element.</p>
+      </video>
+
     </section>
   </main>
 
@@ -52,4 +61,5 @@
   </footer>
 </body>
 </html>
+
 

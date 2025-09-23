@@ -7,7 +7,7 @@ Date: 09/19/2025
 */
 
 /* === Reset === */
-body, header, nav, main, footer, section, article, aside, figure, figcaption, table, th, td, form, input, select, textarea, button {
+body, header, nav, main, footer, section, article, aside, figure, figcaption, table, th, td, form, input, select, textarea, button, video {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -83,6 +83,17 @@ main h2 {
 }
 main p {
   margin-bottom: 1em;
+}
+
+/* === Responsive Video === */
+video {
+  max-width: 100%;
+  height: auto;
+  border: 0.5em solid #448d76;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: block;
+  margin: 2em auto;
 }
 
 /* === Price List (multi-column for larger screens) === */
@@ -266,6 +277,9 @@ footer {
   nav ul li a:hover { background: #2e5d4d; }
   #price-list { column-count: 3; }
   .booking-form { padding: 3em; }
+  video {
+    max-width: 800px;
+  }
 }
 
 /* === Print === */
