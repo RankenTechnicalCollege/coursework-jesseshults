@@ -81,6 +81,11 @@ main h2 {
   font-size: 2em;
   margin-bottom: 0.5em;
 }
+main h3 {
+  margin-top: 1em;
+  font-size: 1.5em;
+  color: #2e5d4d;
+}
 main p {
   margin-bottom: 1em;
 }
@@ -194,20 +199,25 @@ video {
   gap: 20px;
   margin: 2em auto;
   max-width: 1100px;
+  align-items: start;
+  text-align: center;
 }
 .grid article {
   background: rgba(68, 141, 118, 0.1);
   padding: 1em;
   border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.grid article.wide {
-  grid-column: span 2;
+.grid article:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
 }
 .grid img {
   width: 100%;
   border-radius: 10px;
 }
+/* ✅ Removed Emily's span so all articles are equal size */
 
 /* === Contact === */
 #contact-info ul {
@@ -287,5 +297,6 @@ footer {
   nav, footer, .call-btn, .map-container { display: none; }
   body { background: none; color: black; font-size: 12pt; }
 }
+
 
 
