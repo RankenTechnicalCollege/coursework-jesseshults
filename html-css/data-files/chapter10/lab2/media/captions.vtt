@@ -1,0 +1,27 @@
+WEBVTT
+
+NOTE
+Captions for Wild Rescues
+Student Name: Jesse Shults
+File Name: captions.vtt
+Date: 09/22/2025
+
+video::cue {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  padding: 2px 4px;
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+00:00:00.000 --> 00:00:04.000
+Welcome to Wild Rescues.
+
+00:00:04.100 --> 00:00:09.000
+We rescue, rehabilitate, and release injured or orphaned wildlife.
+
+00:00:09.100 --> 00:00:14.000
+Watch as our team provides critical care to animals in need.
+

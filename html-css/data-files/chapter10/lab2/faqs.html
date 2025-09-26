@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+    Student: Jesse Shults
+    File: faqs.html
+    Date: 09/25/2025
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Wild Rescues: FAQs</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
+</head>
+<body>
+<div id="wrapper">
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <a class="nav-icon" onclick="hamburger()">
+            <div>&#9776;</div>
+        </a>
+        <div id="nav-links">
+            <a href="homepage.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="partnership.html">Partnership</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="faqs.html" class="active">FAQs</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="banner-container">
+        <img src="images/baby-hawk.jpg" alt="Baby hawk" class="banner-img">
+        <header>
+            <h1>Wild Rescues</h1>
+            <h3>Rescue. Rehabilitate. Release.</h3>
+        </header>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="tab-desk">
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="partnership.html">Partnership</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="faqs.html" class="active">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Questions -->
+        <div id="questions">
+            <p onclick="ans1()">How can I determine if a baby animal is an orphan?</p>
+            <p onclick="ans2()">How can I tell if an animal has rabies?</p>
+            <p onclick="ans3()">I found a baby bird that fell from its nest. Will the parents orphan it if I touch it?</p>
+            <p onclick="ans4()">How can I volunteer?</p>
+        </div>
+
+        <!-- Answer -->
+        <div id="answer">
+            <h2>Answer:</h2>
+            <p></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Wild Rescues. All Rights Reserved.</p>
+        <p><a href="mailto:contact@wildrescues.net">contact@wildrescues.net</a></p>
+    </footer>
+</div>
+
+<!-- JavaScript -->
+<script src="scripts/script.js"></script>
+</body>
+</html>
