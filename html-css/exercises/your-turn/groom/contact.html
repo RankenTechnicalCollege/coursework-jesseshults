@@ -2,7 +2,7 @@
 <!-- 
   Name: Jesse Shults
   File: contact.html
-  Date: 09/19/2025
+  Date: 09/27/2025
 -->
 <html lang="en">
 <head>
@@ -16,19 +16,23 @@
 
 <body>
   <header>
-    <h1>Contact Fluffy's Grooming</h1>
+    <h1 class="animated-heading">Contact Fluffy's Grooming</h1>
   </header>
 
-<nav>
+  <!-- Hamburger Button (Mobile Only) -->
+  <button id="hamburger" class="mobile-only" aria-label="Toggle Navigation">☰</button>
+
+<!-- Navigation -->
+<nav id="main-nav">
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="contact.html">Contact</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="booking.html">Book Now</a></li>
     <li><a href="groomers.html">Groomers</a></li>
+    <li><a href="pricelist.html">Prices</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
-
 
   <main>
     <section id="contact-info">
@@ -56,6 +60,10 @@
     <p>&copy; 2025 Fluffy's Grooming. All rights reserved.</p>
     <p>Email: <a href="mailto:Jesse_Shults@insideRanken.org">Jesse_Shults@insideRanken.org</a></p>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts/script.js"></script>
 </body>
 </html>
+
 

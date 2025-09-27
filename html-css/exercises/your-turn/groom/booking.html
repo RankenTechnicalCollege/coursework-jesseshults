@@ -2,7 +2,7 @@
 <!-- 
   Name: Jesse Shults
   File: booking.html
-  Date: 09/24/2025
+  Date: 09/27/2025
 -->
 <html lang="en">
 <head>
@@ -16,17 +16,22 @@
 
 <body>
   <header>
-    <h1>Fluffy's Grooming</h1>
+    <h1 class="animated-heading">Fluffy's Grooming</h1>
     <h2>Book Your Appointment</h2>
   </header>
 
-  <nav>
+  <!-- Hamburger Button (Mobile Only) -->
+  <button id="hamburger" class="mobile-only" aria-label="Toggle Navigation">☰</button>
+
+<!-- Navigation -->
+<nav id="main-nav">
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="contact.html">Contact</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="booking.html">Book Now</a></li>
     <li><a href="groomers.html">Groomers</a></li>
+    <li><a href="pricelist.html">Prices</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
@@ -75,5 +80,9 @@
   <footer>
     <p>&copy; 2025 Fluffy's Grooming. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts/script.js"></script>
 </body>
 </html>
+

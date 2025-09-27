@@ -2,7 +2,7 @@
 <!-- 
   Name: Jesse Shults
   File: index.html
-  Date: 09/19/2025
+  Date: 09/27/2025
 -->
 <html lang="en">
 <head>
@@ -16,22 +16,28 @@
 
 <body>
   <header>
-    <h1>Fluffy's Grooming</h1>
+    <h1 class="animated-heading">Fluffy's Grooming</h1>
     <figure>
       <img src="images/dog-banner.jpg" alt="Happy dogs after grooming" class="banner">
       <figcaption>Happy pets, happy owners - every time!</figcaption>
     </figure>
   </header>
 
-<nav>
+  <!-- Hamburger Button (Mobile Only) -->
+  <button id="hamburger" class="mobile-only" aria-label="Toggle Navigation">☰</button>
+
+<!-- Navigation -->
+<nav id="main-nav">
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="contact.html">Contact</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="booking.html">Book Now</a></li>
     <li><a href="groomers.html">Groomers</a></li>
+    <li><a href="pricelist.html">Prices</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
+
 
   <main>
     <h2>Welcome to Fluffy's Grooming!</h2>
@@ -43,6 +49,15 @@
         <figcaption>A fresh bath leaves tails wagging!</figcaption>
       </figure>
       <p class="desktop-only">🐶 Visit our salon to see the difference in your pet's happiness after grooming!</p>
+
+      <!-- Added video element -->
+      <video controls poster="images/dog-banner.jpg">
+        <source src="media/groom.mp4" type="video/mp4">
+        <source src="media/groom.webm" type="video/webm">
+        <track src="media/captions.vtt" kind="captions" srclang="en" label="English Captions" default>
+        <track src="media/descriptions.vtt" kind="descriptions" srclang="en" label="English Descriptions">
+        <p>Your browser does not support the video element.</p>
+      </video>
     </section>
   </main>
 
@@ -50,7 +65,11 @@
     <p>&copy; 2025 Fluffy's Grooming. All rights reserved.</p>
     <p>Email: <a href="mailto:Jesse_Shults@insideRanken.org">Jesse_Shults@insideRanken.org</a></p>
   </footer>
+
+  <!-- JavaScript for Hamburger Menu -->
+  <script src="scripts/script.js"></script>
 </body>
 </html>
+
 
 
