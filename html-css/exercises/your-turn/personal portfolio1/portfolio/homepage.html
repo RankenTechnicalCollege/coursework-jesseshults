@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <!-- 
     Name: Jesse Shults
-    File: template.html
+    File: homepage.html
     Date: 09/22/2025
 -->
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Portfolio - Jesse Shults</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>Jesse Shults</h1>
     <h2>To show future employers my skill-set over time!</h2>
-    <img src="images/jesseshults.jpg" alt="jesseshults" height="400" width="300">
+    <img src="images/jesseshults.jpg" alt="jesseshults" height="400" width="300" class="round-img">
   </header>
 
-<section>
-  <h3>Upbeat Background Music</h3>
-  <audio controls>
-    <source src="media/Scott Holmes Music - So Happy.mp3" type="audio/mp3">
-    <source src="media/Scott Holmes Music - So Happy oog.ogg" type="audio/ogg">
-    Your browser does not support the audio element.
-  </audio>
-  <p><small>Music: “Happy Background Music” by Scott Holmes, via Free Music Archive</small></p>
-</section>
-
-
-
-
+  <!-- Hamburger Button (Mobile Only) -->
+  <button id="hamburger" class="mobile-only" aria-label="Toggle Navigation">
+    ☰
+  </button>
 
   <!-- Navigation -->
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Me</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
+  <!-- Audio Section -->
+  <section>
+    <h3>Upbeat Background Music</h3>
+    <audio controls>
+      <source src="media/Scott Holmes Music - So Happy.mp3" type="audio/mp3">
+      <source src="media/Scott Holmes Music - So Happy oog.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <p><small>Music: “Happy Background Music” by Scott Holmes, via Free Music Archive</small></p>
+  </section>
 
+  <!-- Main -->
   <main>
     <h2>Welcome</h2>
     <p>The home page is where we welcome you and you see the main page first where it becomes easy to navigate.</p>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Jesse Shults. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
