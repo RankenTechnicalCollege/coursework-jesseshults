@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Student's Name, Current Date -->
+<!-- Jesse Shults, 09/29/2025 -->
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <title>NYC Highlights | Extend Your Knowledge 12</title>
   </head>
@@ -15,30 +15,72 @@
     
     <!-- Bootstrap Jumbotron -->
     <header class="jumbotron jumbotron-fluid text-center mb-0">
-          <div class="container">
-            <h1 class="display-3">New York City Views</h1>
-          </div>
+      <div class="container">
+        <h1 class="display-3">New York City Views</h1>
+        <p class="lead">Explore the highlights of the city that never sleeps</p>
+      </div>
     </header>
     
     <!-- Main Content Area -->
     <main class="container my-5">
-            
+
+      <!-- Bootstrap Carousel -->
+      <div id="nycCarousel" class="carousel slide" data-ride="carousel">
+        
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#nycCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#nycCarousel" data-slide-to="1"></li>
+          <li data-target="#nycCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/new-york-east.jpg" class="d-block w-100" alt="new-york-east">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>NYC Skyline</h5>
+              <p>The iconic New York City skyline at sunset.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/new-york-empire.jpg" class="d-block w-100" alt="new-york-empire">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Central Park</h5>
+              <p>A green oasis in the heart of Manhattan.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/new-york-south.jpg" class="d-block w-100" alt="new-york-south">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Times Square</h5>
+              <p>The vibrant lights and energy of NYC.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#nycCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#nycCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+
+      </div>
     </main>
     
     <!-- Footer -->
     <footer class="jumbotron-fluid text-center bg-dark p-2">
-       
-        <div class="container text-white">
-            <p>&copy; Copyright 2021. All Rights Reserved.</p>
-            <p>Webpage Created by: Student's Name</p>
-        </div>
-        
+      <div class="container text-white">
+        <p>&copy; Copyright 2025. All Rights Reserved.</p>
+        <p>Webpage Created by: Jesse Shults</p>
+      </div>
     </footer>  
     
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>
