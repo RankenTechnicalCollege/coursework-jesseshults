@@ -1,0 +1,45 @@
+/* General styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffaf5;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Cards with background images */
+.card.bg-dark.bg-opacity-50 {
+  backdrop-filter: blur(2px);
+  border-radius: 0.5rem;
+}
+
+/* Carousel */
+.carousel-inner img {
+  object-fit: cover;
+  height: 400px;
+}
+
+/* Footer */
+footer a {
+  color: #ffc107;
+}
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Sign-in page enhancements */
+.card-header.bg-danger {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card-footer a {
+  text-decoration: none;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
