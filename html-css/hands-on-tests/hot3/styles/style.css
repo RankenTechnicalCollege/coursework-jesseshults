@@ -1,0 +1,81 @@
+/* === General === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+/* === Navbar === */
+.navbar-brand {
+  font-weight: bold;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* === Jumbotron (Hero Section) === */
+.jumbotron {
+  background: url('https://source.unsplash.com/1200x400/?lawn,mowing') center/cover no-repeat;
+  color: white;
+  padding: 4rem 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* === Cards (Products & Team Pages) === */
+.card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.95rem;
+}
+
+/* === Section Headings === */
+h2 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* === Footer === */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* === Utility Overrides === */
+.text-center {
+  text-align: center !important;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 576px) {
+  .jumbotron {
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+}
