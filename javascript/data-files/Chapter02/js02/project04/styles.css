@@ -1,18 +1,11 @@
-/*  JavaScript 7th Edition
-    Chapter 2
-    Hands-on Project 2-4
+/* Styles for Project 2-4 */
 
-    Filename: styles.css
-*/
-
-/* apply a natural box layout model to all elements */
+/* Natural box layout model for all elements */
 * {
-   -moz-box-sizing: border-box;
-   -webkit-box-sizing: border-box;
    box-sizing: border-box;
 }
 
-/* reset rules */
+/* Reset styles */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -34,12 +27,13 @@ time, mark, audio, video {
    vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+/* HTML5 elements for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
    display: block;
 }
 
+/* Body */
 body {
    line-height: 1;
    width: 960px;
@@ -49,11 +43,12 @@ body {
    position: relative;   
 }
 
+/* Lists */
 ol, ul {
    list-style: none;
 }
 
-/* page header */
+/* Header */
 header {
    background: #330570;
    width: 100%;
@@ -63,7 +58,7 @@ header {
    line-height: 1.5em;
 }
 
-/* main content */
+/* Main content */
 article {
    width: 960px;
    height: 250px;
@@ -77,27 +72,30 @@ article h2 {
    padding: 10px;
 }
 
-/* form */
+/* Form styling */
 form {
    margin: 0 auto;
+   padding-left: 20px;
 }
 
-input {
+input[type="checkbox"] {
    float: left;
    clear: left;
    margin: 10px;
+   transform: scale(1.2);
 }
 
 label {
    float: left;
-   font-size: 1.4em;
+   font-size: 1.2em;
+   line-height: 2em;
 }
 
+/* Sidebar totals */
 aside {
    position: absolute;
    top: 120px;
    left: 400px;
-   outline: 1px solid red;
 }
 
 aside span {
