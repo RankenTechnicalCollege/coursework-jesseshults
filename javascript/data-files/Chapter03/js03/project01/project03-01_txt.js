@@ -3,17 +3,34 @@
       Project 03-01
 
       Application to calculate total order cost
-      Author: 
-      Date:   
+      Author: Jesse Shults
+      Date:   10/27/25
 
       Filename: project03-01.js
 */
 
+// Get all checkboxes with class "menuItem"
+let menuItems = document.getElementsByClassName("menuItem");
 
+// Add a click event listener to each checkbox
+for (let i = 0; i < menuItems.length; i++) {
+   menuItems[i].addEventListener("click", calcTotal);
+}
 
+// Function to calculate the total cost
+function calcTotal() {
+   let orderTotal = 0;
 
+   for (let i = 0; i < menuItems.length; i++) {
+      if (menuItems[i].checked) {
+         orderTotal += Number(menuItems[i].value);
+      }
+   }
 
- // Function to display a numeric value as a text string in the format $##.## 
- function formatCurrency(value) {
-    return "$" + value.toFixed(2);
- }
+   document.getElementById("billTotal").innerHTML = formatCurrency(orderTotal);
+}
+
+// Function to display a numeric value as a text string in the format $##.##
+function formatCurrency(value) {
+   return "$" + value.toFixed(2);
+}
