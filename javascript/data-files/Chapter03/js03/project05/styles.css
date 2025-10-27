@@ -1,18 +1,18 @@
 /*  JavaScript 7th Edition
     Chapter 3
-    Hands-on Project 3-3
+    Hands-on Project 3-5
 
     Filename: styles.css
 */
 
-/* apply a natural box layout model to all elements */
+/* Apply a natural box layout model to all elements */
 * {
    -moz-box-sizing: border-box;
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
 }
 
-/* reset rules */
+/* Reset rules */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,14 +45,14 @@ body {
    max-width: 960px;
    background: white;
    margin: 0 auto;
-   font-family: Arial, Helvetica, sans-serif; 
+   font-family: Arial, Helvetica, sans-serif;
 }
 
 ol, ul {
    list-style: none;
 }
 
-/* page header */
+/* Page header */
 header {
    background: #FFE373;
    width: 100%;
@@ -65,7 +65,7 @@ header {
    border-right: 1px solid black;
 }
 
-/* main content */
+/* Main content */
 article {
    width: 960px;
    text-align: center;
@@ -82,11 +82,10 @@ article h2 {
    padding: 10px;
 }
 
-/* table styles */
-
+/* Table styles */
 table {
    border-collapse: collapse;
-   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
    margin: 0 auto 20px;
 }
 
@@ -112,14 +111,17 @@ table td {
    height: 25px;
 }
 
+/* Table header cell */
 table thead td {
    font-size: 1.2em;
    letter-spacing: 0.1em;
    text-align: center;
    padding-bottom: 10px;
 }
-td.group1 { background-color: hsl(299,75%,80%);}
-td.group2 { background-color: hsl(299,75%,65%);}
-td.group3 { background-color: hsl(299,75%,50%);;}
-td.group4 { background-color: hsl(299,75%,35%);;}
-td.group5 { background-color: hsl(299,75%,20%);;}
+
+/* Bar chart color groups */
+td.group1 { background-color: hsl(299, 75%, 80%); }
+td.group2 { background-color: hsl(299, 75%, 65%); }
+td.group3 { background-color: hsl(299, 75%, 50%); }
+td.group4 { background-color: hsl(299, 75%, 35%); }
+td.group5 { background-color: hsl(299, 75%, 20%); }
