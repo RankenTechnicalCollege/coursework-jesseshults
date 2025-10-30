@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge 2 - Age Verification</title>
+</head>
+<body>
+  <h1>Age Verification</h1>
+
+  <input type="text" id="ageInput" placeholder="Enter your age">
+  <button id="verifyAgeBtn">Verify Age</button>
+
+  <p id="message"></p>
+
+  <script>
+    const ageInput = document.getElementById("ageInput");
+    const verifyAgeBtn = document.getElementById("verifyAgeBtn");
+    const message = document.getElementById("message");
+
+    verifyAgeBtn.addEventListener("click", function() {
+      const ageValue = ageInput.value.trim();
+      const age = parseInt(ageValue, 10);
+
+      // If user does not enter an integer
+      if (!/^\d+$/.test(ageValue)) {
+        message.textContent = "Please enter your age!";
+        return;
+      }
+
+      // Now we have an integer
+      if (age < 1 || age > 200) {
+        message.textContent = "Age out of range!";
+      } else if (age >= 21) {
+        message.textContent = "Welcome to the venue!";
+      } else {
+        message.textContent = "You're not old enough!";
+      }
+    });
+  </script>
+</body>
+</html>

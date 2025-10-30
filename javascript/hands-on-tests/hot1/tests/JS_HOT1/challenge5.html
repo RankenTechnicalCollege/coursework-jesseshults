@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge 5 - Multiples of X</title>
+</head>
+<body>
+  <h1>Multiples of 15 (between 1 and 100)</h1>
+
+  <ul id="multiplesList"></ul>
+
+  <script>
+    const multiplesList = document.getElementById("multiplesList");
+
+    // Print multiples of 15 between 1 and 100
+    for (let i = 15; i <= 100; i += 15) {
+      const li = document.createElement("li");
+      li.textContent = i;
+      multiplesList.appendChild(li);
+    }
+  </script>
+</body>
+</html>
+

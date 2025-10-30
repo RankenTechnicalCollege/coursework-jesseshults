@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge 1 - Favorite Movie List</title>
+</head>
+<body>
+  <h1>Favorite Movie List</h1>
+
+  <input type="text" id="movieInput" placeholder="Enter a favorite movie">
+  <button id="addMovieBtn">Add Movie</button>
+
+  <ul id="movieList"></ul>
+
+  <script>
+    // Create an array named "favoriteMovies" that holds 3 of your personal favorite movies.
+    const favoriteMovies = ["The Matrix", "Inception", "Interstellar"];
+
+    // Grab references to DOM elements
+    const movieInput = document.getElementById("movieInput");
+    const addMovieBtn = document.getElementById("addMovieBtn");
+    const movieList = document.getElementById("movieList");
+
+    // Function to render the list
+    function renderMovies() {
+      // Clear existing list
+      movieList.innerHTML = "";
+      // Use a for loop to print the movies stored in the array
+      for (let i = 0; i < favoriteMovies.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = favoriteMovies[i];
+        movieList.appendChild(li);
+      }
+    }
+
+    // Initial render
+    renderMovies();
+
+    // Event listener for the button
+    addMovieBtn.addEventListener("click", function() {
+      const newMovie = movieInput.value.trim();
+      if (newMovie !== "") {
+        // Add the movie to the existing array
+        favoriteMovies.push(newMovie);
+        // Clear the input
+        movieInput.value = "";
+        // Re‐render the list
+        renderMovies();
+      }
+    });
+  </script>
+</body>
+</html>
