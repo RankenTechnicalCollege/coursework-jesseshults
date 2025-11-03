@@ -79,7 +79,7 @@ article h2 {
    margin: 0;
 }
 
-article textarea#comment {
+article textarea#commentBox {
    display: block;
    width: 75%; 
    margin: 10px auto;
@@ -90,6 +90,7 @@ article textarea#comment {
    border: 1px solid rgb(102, 51, 0);
 }
 
+/* character count + warning container */
 div {
    width: 500px;
    margin-left: 12.5%;
@@ -98,4 +99,6 @@ div {
 div#warningBox {
    color: red;
    margin-top: 15px;
+   font-size: 1em;
+   font-weight: bold;
 }
