@@ -4,15 +4,16 @@
       Project 05-04
 
       Project to display footnotes in a popup window
-      Author: 
-      Date:   
+      Author: Jesse Shults
+      Date: 2025-11-03
 
       Filename: footnotes.js
 */
 
 let footnotes = [
    "A serf, a person without freedom", 
-   "Unnatural, twisted", "Artfullness", 
+   "Unnatural, twisted", 
+   "Artfulness", 
    "Lost all color", 
    "Appearance, visage", 
    "The wife of King Priam of Troy during the Trojan War",
@@ -22,7 +23,7 @@ let footnotes = [
    "Head", 
    "A lie that is deep and pervasive", 
    "An oath, short for by God's Wounds", 
-   "A temperment that causes one to be quick to anger", 
+   "A temperament that causes one to be quick to anger", 
    "Before", 
    "Fatted all the birds of the air",
    "Entrails", 

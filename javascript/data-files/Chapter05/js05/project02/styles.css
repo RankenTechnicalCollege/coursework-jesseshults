@@ -71,9 +71,7 @@ article {
    position: relative;
 }
 
-
-
-/*-------------------- Project Styles ------------------*/
+/* -------------------- Project Styles ------------------ */
 
 img {
    cursor: pointer;
@@ -82,6 +80,7 @@ img {
 img:hover {
    filter: drop-shadow(0px 0px 10px red);
 }
+
 article h2 {
    font-weight: bold;
    font-size: 24px;
@@ -89,13 +88,11 @@ article h2 {
    text-align: center;
 }
 
-
 div#container {
    --main-height: 440px;
    height: var(--main-height);
    position: relative;
 }
-
 
 div#instructions {
    width: 340px;
@@ -112,7 +109,7 @@ div#instructions p {
 }
 
 div#instructions p#photo_bucket {
-padding: 5px 0 0 40px;
+   padding: 5px 0 0 40px;
 }
 
 div#instructions p#photo_bucket img {
@@ -138,15 +135,19 @@ ol {
    display: flex;
    flex-flow: column wrap;
    align-content: flex-start;
-   
 }
 
 ol li {
-   margin-left: 0
+   margin-left: 0;
    padding-left: 0;
    margin-right: 40px;
 }
+
 ol li img {
    width: 160px;
    height: 120px;
+
+   /* Optional enhancements */
+   /* border: 2px solid #ccc; */
+   /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); */
 }
