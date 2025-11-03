@@ -17,8 +17,8 @@ let board = document.getElementById("board");
 let allTiles = document.getElementsByClassName("tile");
 
 // Objects that will reference the first and second tile clicked by the player
-let firstFlipped;
-let secondFlipped;
+let firstFlipped = null;
+let secondFlipped = null;
 
 // Variable containing the id of a timed command
 let timeID;
@@ -32,9 +32,9 @@ window.addEventListener("load", playConcentration);
 
 // Function that scrambles the order of the tiles within the board
 function scrambleTiles() {
-   for (let i = 0; i < allTiles.length; i++) {
-      let randomIndex = Math.floor(allTiles.length * Math.random());
-      board.insertBefore(board.children[randomIndex], board.children[i]);
+   for (let i = allTiles.length - 1; i > 0; i--) {
+      let randomIndex = Math.floor(Math.random() * (i + 1));
+      board.insertBefore(allTiles[randomIndex], allTiles[i]);
    }
 }
 
@@ -42,7 +42,12 @@ function scrambleTiles() {
 function playConcentration() {
    for (let i = 0; i < allTiles.length; i++) {
       allTiles[i].onclick = function () {
-         if (tilesFlipped < 2 && this.lastElementChild.className === "back") {
+         // Prevent flipping more than two tiles
+         if (tilesFlipped === 2) return;
+
+         // Only flip if the tile is face down (back is on top)
+         if (this.lastElementChild.className === "back") {
+            // Flip the tile
             this.appendChild(this.firstElementChild);
             tilesFlipped++;
 
@@ -51,27 +56,30 @@ function playConcentration() {
             } else if (tilesFlipped === 2) {
                secondFlipped = this;
 
-               if (
-                  firstFlipped.firstElementChild.src ===
-                  secondFlipped.firstElementChild.src
-               ) {
-                  tilesFlipped = 0; // keep both tiles flipped
+               // Check if tiles match
+               let img1 = firstFlipped.querySelector(".front").src;
+               let img2 = secondFlipped.querySelector(".front").src;
+
+               if (img1 !== img2) {
+                  // Mismatch - flip back after 1 second
+                  timeID = window.setTimeout(flipBack, 1000);
                } else {
-                  timeID = window.setTimeout(flipBack, 1000); // 1 second
+                  // Match - reset count
+                  tilesFlipped = 0;
                }
             }
          }
       };
    }
 
+   // Function to flip mismatched tiles back
    function flipBack() {
-      if (
-         firstFlipped.firstElementChild.src !==
-         secondFlipped.firstElementChild.src
-      ) {
+      if (firstFlipped && secondFlipped) {
          firstFlipped.appendChild(firstFlipped.firstElementChild);
          secondFlipped.appendChild(secondFlipped.firstElementChild);
       }
+      firstFlipped = null;
+      secondFlipped = null;
       tilesFlipped = 0;
    }
 }
