@@ -4,8 +4,8 @@
       Project 07-04
 
       Project to create a customer queue
-      Author: 
-      Date:   
+      Author: Jesse Shults
+      Date: 11/15/2025
 
       Filename: project07-04.js
 */
@@ -28,15 +28,99 @@ let topButton = document.getElementById("topButton");
 
 let status = document.getElementById("status");
 
+// initial list display
 generateCustomerList();
 
-// Function to generate the ordered list based on the contents of the customers array
+
+// -------------------------------
+// FUNCTION: Update the OL list
+// -------------------------------
 function generateCustomerList() {
    customerList.innerHTML = "";
    for (let i = 0; i < customers.length; i++) {
-      let customerItem = document.createElement("li");      
-      customerItem.textContent = customers[i];     
-      customerList.appendChild(customerItem);
+      let li = document.createElement("li");
+      li.textContent = customers[i];
+      customerList.appendChild(li);
    }
 }
 
+
+// -------------------------------
+// ADD CUSTOMER
+// -------------------------------
+addButton.onclick = function() {
+   let name = customerName.value.trim();
+
+   if (name === "") {
+      status.textContent = "Please enter a customer name to add.";
+      return;
+   }
+
+   customers.push(name);
+   generateCustomerList();
+
+   status.textContent = `"${name}" has been added to the queue.`;
+   customerName.value = "";
+};
+
+
+// -------------------------------
+// SEARCH CUSTOMER
+// -------------------------------
+searchButton.onclick = function() {
+   let name = customerName.value.trim();
+
+   if (name === "") {
+      status.textContent = "Please enter a name to search.";
+      return;
+   }
+
+   let index = customers.indexOf(name);
+
+   if (index !== -1) {
+      status.textContent = `"${name}" found at position ${index + 1}.`;
+   } else {
+      status.textContent = `"${name}" was NOT found in the queue.`;
+   }
+};
+
+
+// -------------------------------
+// REMOVE CUSTOMER BY NAME
+// -------------------------------
+removeButton.onclick = function() {
+   let name = customerName.value.trim();
+
+   if (name === "") {
+      status.textContent = "Please enter a name to remove.";
+      return;
+   }
+
+   let index = customers.indexOf(name);
+
+   if (index !== -1) {
+      customers.splice(index, 1);
+      generateCustomerList();
+      status.textContent = `"${name}" has been removed.`;
+   } else {
+      status.textContent = `"${name}" was not found and cannot be removed.`;
+   }
+
+   customerName.value = "";
+};
+
+
+// -------------------------------
+// REMOVE TOP CUSTOMER
+// -------------------------------
+topButton.onclick = function() {
+   if (customers.length === 0) {
+      status.textContent = "The queue is already empty.";
+      return;
+   }
+
+   let removed = customers.shift();
+   generateCustomerList();
+
+   status.textContent = `"${removed}" was removed from the top of the queue.`;
+};

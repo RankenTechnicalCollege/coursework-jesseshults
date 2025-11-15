@@ -4,88 +4,104 @@
       Project 07-05
 
       Project to compare the distribution of word lengths between two authors
-      Author: 
-      Date:   
+      Author: Jesse Shults
+      Date: 11/15/2025
 
       Filename: project07-05.js
 */
 
-// Onchange event handler to load an external file for author 1
-document.getElementById("button1").onchange = function() {
-   // Retrieve the selected file for author 1
-   let file = this.file[0];
+// -------------------------------
+// Fix #1 — Wrong file input property
+// this.file[0] ❌   →   this.files[0] ✅
+// -------------------------------
+
+// Load Author 1 file
+document.getElementById("button1").onchange = function () {
+   let file = this.files[0];
    let doc = document.getElementById("document1");
    let count = document.getElementById("count1");
-   
-   // Generate the word frequency table for author 1
    generateWordFreq(file, doc, count);
 };
 
-// Onchange event handler to load an external file for author 2
-document.getElementById("button2").onchange = function() {
-   // Retrieve the selected file for author 2
-   let file = this.file[0];
+// Load Author 2 file
+document.getElementById("button2").onchange = function () {
+   let file = this.files[0];
    let doc = document.getElementById("document2");
    let count = document.getElementById("count2");
-   
-   // Generate the word frequency table for author 2
    generateWordFreq(file, doc, count);
 };
 
 
-// Function that generates a table of frequencies for words
-// of 1 to 15 characters in length
-
+// -------------------------------------------------------------
+// Function: process uploaded file and calculate word frequencies
+// -------------------------------------------------------------
 function generateWordFreq(inputFile, outputDoc, outputCount) {
-   // Read the contents of the selected file
-   let fr = new Reader();
-   fr.read(inputFile); 
 
-   // Once the file has finished loading, display the document in the page
-   fr.onload=function() { 
+   // -------------------------------
+   // Fix #2 — Wrong object constructor
+   // Reader() ❌ → FileReader() ✅
+   // -------------------------------
+   let fr = new FileReader();
+
+   fr.readAsText(inputFile);
+
+   fr.onload = function () {
+
+      // Display the document text
       outputDoc.innerHTML = fr.result;
-      
-      // Store the text content of the output document
-      let sourceText = outputDoc.innerHTML;
-      
-      // Remove any character that is not alphabetic or whitespace
-      let alphaRegx = "/[^a-zA-Z\s]/g";
-      sourceText = sourceText.replace(alphaRegx, "");  
 
-      // Split the text into an array at each occurence of one or more whitespace characters
-      let words = sourceText.split(/\s+/); 
+      // -------------------------------
+      // Fix #3 — Use textContent, NOT innerHTML
+      // innerHTML includes HTML tags and corrupts word length counts
+      // -------------------------------
+      let sourceText = outputDoc.textContent;
 
-      // Initial frequency array for words of 1 to 15 characters in length
-      // Setting their initial counts to 0.
-      let freqs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      // -------------------------------
+      // Fix #4 — Regex literal error
+      // "/[^a-zA-Z\s]/g" (string) ❌  →  /[^a-zA-Z\s]/g (regex) ✅
+      // -------------------------------
+      let alphaRegx = /[^a-zA-Z\s]/g;
+      sourceText = sourceText.replace(alphaRegx, "");
 
-      // Loop through every word in the words array
-      for (let i = 0; i <= words.length; i++) {
-         
-         // If a word has 15 or more characters, add it to the count
-         // of words in the array with index 15
-         if (words[i].length >= 15) {
+      // -------------------------------
+      // Fix #5 — Regex split error
+      // "\s+" (string) ❌ → /\s+/ (regex) ✅
+      // -------------------------------
+      let words = sourceText.split(/\s+/);
+
+      // Initialize frequency array
+      let freqs = Array(16).fill(0);
+
+      // -------------------------------
+      // Fix #6 — For-loop off-by-one
+      // i <= words.length ❌ → i < words.length ✅
+      // -------------------------------
+      for (let i = 0; i < words.length; i++) {
+
+         let len = words[i].length;
+
+         if (len >= 15) {
             freqs[15]++;
-         } else {
-            // Add to the count of words of length i by increasing
-            // the value of the ith entry in the freqs array
-            freqs[words[i].length]++;
+         } else if (len > 0) {
+            freqs[len]++;
          }
       }
 
-      // Store the total number of words in the sample text
       let totalWords = words.length;
-      
-      // Loop through the 15 entries in the freqs array
-      // Ignore the 0th index, since we don't count words of 0 length
+
+      // Display results
       let outputPara = outputCount.getElementsByTagName("p");
+
+      // -------------------------------
+      // Fix #7 — WRONG percent logic
+      // totalWords / freqs[i] ❌
+      // correct: freqs[i] / totalWords ❗
+      // -------------------------------
       for (let i = 1; i <= 15; i++) {
-         // Calculate the percent of words of each length
-         // Display the frequency to 1 decimal place
-         let percent = (totalWords/freqs[i]*100).toFixed(1)+"%"
+         let percent = ((freqs[i] / totalWords) * 100).toFixed(1) + "%";
          outputPara[i - 1].textContent = percent;
-      }      
-      
-   } 
-   
+      }
+   };
 }
+
+

@@ -63,8 +63,6 @@ header {
    margin-bottom: 0;
 }
 
-
-
 /*-------------------- Project Styles ------------------*/
 
 body > div {
@@ -95,7 +93,6 @@ section#docs {
    justify-content: center;
 }
 
-
 article {
    width: 400px;
    font-size: 0.8em;
@@ -116,6 +113,7 @@ article h2 {
    font-size: 1.15em;
    font-weight: bold;
 }
+
 article p {
    margin: 10px 0;
 }
@@ -125,7 +123,6 @@ section#counts {
    flex-flow: row nowrap;
    justify-content: center;
 }
-
 
 section#counts h1 {
    font-size: 1.2em;

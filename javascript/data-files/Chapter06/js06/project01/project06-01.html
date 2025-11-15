@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
    <!--
       JavaScript 7th Edition
-      Chapter 7
-      Hands-on Project 7-1
+      Chapter 6
+      Hands-on Project 6-1
 
       Author: Jesse Shults
       Date:   11/15/2025
 
-      Filename: project07-01.html
+      Filename: project06-01.html
    -->
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-   <title>Hands-on Project 7-1</title>
+   <title>Hands-on Project 6-1</title>
    <link rel="stylesheet" href="styles.css">
-   <!-- Load the JavaScript file for this project -->
-   <script src="project07-01_txt.js" defer></script>
+   <script src="project06-01.js" defer></script>
 </head>
 
 <body>
    <header>
-      <h1>Hands-on Project 7-1</h1>
+      <h1>Hands-on Project 6-1</h1>
    </header>
 
    <section>
       <h2>Create your Account</h2>
-
       <form id="signup" name="signup" method="get" action="formsubmit.html">
          <fieldset>
             <legend>Enter your Account Information</legend>
@@ -34,10 +32,15 @@
             <label for="user">Username</label>
             <input type="text" id="user" name="user" required>
 
-            <label for="pwd">Password</label>
-            <input type="password" id="pwd" name="pwd" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-            <div id="feedback"></div>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd" required
+                   pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+
+            <label for="pwd2">Confirm Password</label>
+            <input type="password" id="pwd2" name="pwd2" required>
 
             <input type="submit" id="submitButton" value="Save">
          </fieldset>
@@ -45,4 +48,5 @@
    </section>
 </body>
 </html>
+
 
